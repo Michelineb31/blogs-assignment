@@ -1,0 +1,16 @@
+{
+    "name": "micheline/blogs",
+    "authors": [
+        {
+            "name": "Micheline Bourque",
+            "email": "mbourque@mail.greenriver.edu"
+        }
+    ],
+    "require": {
+        "bcosca/fatfree-core": "dev-master"
+    },
+    "autoload": {
+        "classmap": ["model/", "classes/"]
+    }
+    
+}
