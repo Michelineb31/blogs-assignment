@@ -3,8 +3,13 @@
     //Require the autoload file
     require_once('vendor/autoload.php');
     
+    session_start();
+    
     //Create an instance of the Base class
     $f3 = Base::instance();
+
+    //Instantiate the database class
+    $blogsDB = new BlogsDB();
     
     //Define a default route
     $f3->route('GET /', function() {
