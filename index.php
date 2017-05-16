@@ -9,12 +9,11 @@
     $f3 = Base::instance();
 
     //Instantiate the database class
-    $blogsDB = new BlogsDB();
+    //$blogsDB = new BlogsDB();
     
     //Define a default route
     $f3->route('GET /', function() {
         $view = new View;
-        //echo 'Hello World';
         echo $view->render('pages/home.html');         
         }
     );

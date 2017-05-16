@@ -2,11 +2,14 @@
 Class Blogger
 {
     //variables
+    protected $fname;
+    protected $lname;
     
     
-    function __construct()
+    function __construct($fname = "unknown", $lname = "unknown")
     {
-        //$this->name = $name;
-        //$this->color = $color;
+        $this->fname = $fname;
+        $this->lname = $lname;
+        
     }
 }

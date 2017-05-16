@@ -270,3 +270,4 @@
 [12-May-2017 00:57:59 America/Chicago] [328/blogs-assignment/index.php:18] Base->run()
 [12-May-2017 01:09:15 America/Chicago] HTTP 404 (GET /images/profile)
 [12-May-2017 01:09:15 America/Chicago] [328/blogs-assignment/index.php:18] Base->run()
+[16-May-2017 00:32:53 America/Chicago] Class 'BlogsDB' not found [/home/mbourque/public_html/328/blogs-assignment/index.php:12]
