@@ -52,5 +52,3 @@ Navigation bar for Micheline's Dating Website
     </ul>
   </div><!-- /.navbar-collapse -->
 </nav>
-</body>
-</html>
