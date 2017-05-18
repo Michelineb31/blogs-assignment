@@ -1,4 +1,21 @@
 <?php
+/**
+ *This file contains a blogger object
+ */
+
+ /**
+  *This file contains a blogger object
+  *which contains some basic information
+  *about the blogger as well as how many posts
+  *they have.
+  *
+  * @author Micheline Bourque <mbourque@mail.greenriver.edu>
+  *
+  *@version 1.0
+  *
+  *PHP version 5
+  *@link http://mbourque.greenrivertech.net/328/blogs-assignment/
+  */
 Class Blogger
 {
     //variables
@@ -9,7 +26,8 @@ Class Blogger
     protected $recentBlog;
     
     
-    function __construct($fname = "unknown", $lname = "unknown"){
+    function __construct($fname = "unknown", $lname = "unknown")
+    {
         $this->fname = $fname;
         $this->lname = $lname;
         
@@ -20,7 +38,8 @@ Class Blogger
      *stored as the bloggers first name
      *@return The bloggers first name
      **/
-    function getFname() {
+    function getFName()
+    {
         return $this->fname;
     }
     
@@ -29,7 +48,8 @@ Class Blogger
      *stored as the bloggers last name
      *@return The bloggers last name
      **/
-    function getLname() {
+    function getLName()
+    {
         return $this->lname;
     }
     
@@ -39,7 +59,8 @@ Class Blogger
      *blogger has posted
      *@return the number of blog posts
      */
-    function getNumBlogs() {
+    function getNumBlogs()
+    {
         return $this->numBlogs;
     }
     
@@ -49,7 +70,8 @@ Class Blogger
      *bloggers profile photo
      *@return bloggers profile photo
      **/
-    function getPhoto() {
+    function getPhoto()
+    {
         return $this->photo;
     }
     
@@ -58,7 +80,8 @@ Class Blogger
      *blog that the blogger has posted
      *@return most recent blog
      */
-    function getRecentBlog() {
+    function getRecentBlog()
+    {
         return $this->recentBlog;
     }
     
@@ -70,7 +93,8 @@ Class Blogger
     * @param type $fname first name of the blogger
     *
     */    
-    function setFname($fname) {
+    function setFName($fname)
+    {
         if (!ctype_alpha($fname)) {
             $this->lname = null;
         } else {
@@ -86,7 +110,8 @@ Class Blogger
     * @param type $lname last name of the blogger
     *
     */    
-    function setLname($lname) {
+    function setLName($lname)
+    {
         if (!ctype_alpha($lname)) {
             $this->lname = null;
         } else {
@@ -102,7 +127,8 @@ Class Blogger
     * @param type $numBlogs number of blogs the blogger posted
     *
     */    
-    function setNumBlogs($numBlogs){
+    function setNumBlogs($numBlogs)
+    {
             $this->numBlogs = $numBlogs;            
     }
     
@@ -112,7 +138,8 @@ Class Blogger
      *
      *@param type $photo file name for image the blogger has uploaded
      */
-    function setPhoto($photo) {
+    function setPhoto($photo)
+    {
         $this->photo = $photo;
     }
     
@@ -122,6 +149,7 @@ Class Blogger
      *
      *@param type $recentBlog is the most recent blog posted
      */
-    function setRecentBlog($recentBlog) {
+    function setRecentBlog($recentBlog)
+    {
         $this->recentBlog = $recentBlog;
     }
