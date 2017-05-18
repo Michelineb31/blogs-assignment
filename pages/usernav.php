@@ -44,9 +44,10 @@ Navigation bar for Micheline's Dating Website
     <ul class="nav navbar-nav">
           <img id="trumpet"src="images/trumpet.png" alt="trumpet;">
           <li><a href="#">Home</a></li>
-          <li><a href="#">Become a Blogger</a></li>
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Login</a></li>
+          <li><a href="#">My Blogs</a></li>
+          <li><a href="#">Create Blog</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Logout</a></li>
         </ul>
       </li>
     </ul>
