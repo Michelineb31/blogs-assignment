@@ -293,3 +293,7 @@
 [17-May-2017 20:49:58 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/mbourque/public_html/328/blogs-assignment/pages/navbar.php:1) in /home/mbourque/public_html/328/blogs-assignment/index.php on line 7
 [17-May-2017 20:49:58 America/Chicago] Fatal error: session_start(): Cannot send session cache limiter - headers already sent (output started at /home/mbourque/public_html/328/blogs-assignment/pages/navbar.php:1)
 [17-May-2017 20:49:58 America/Chicago] [328/blogs-assignment/index.php:7] 
+[17-May-2017 21:32:40 America/Chicago] HTTP 404 (GET /styles/bootstrap.css.map)
+[17-May-2017 21:32:40 America/Chicago] [328/blogs-assignment/index.php:25] Base->run()
+[17-May-2017 21:32:41 America/Chicago] HTTP 404 (GET /styles/bootstrap-theme.css.map)
+[17-May-2017 21:32:41 America/Chicago] [328/blogs-assignment/index.php:25] Base->run()

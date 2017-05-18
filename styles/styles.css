@@ -38,7 +38,12 @@
 .navbar-collapse .navbar-nav.navbar-right:last-child {
     margin-right: 0;
 }
+
+#trumpet{
+    width: 50%;
+    height: auto;
 }
+
 /*Styles for left side navbar*/
 /*
 .navbar-fixed-left {

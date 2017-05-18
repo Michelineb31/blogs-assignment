@@ -6,6 +6,7 @@
     
     session_start();
     
+    //need to make this only for when users are not logged in
     include_once('pages/navbar.php');
     
     //Create an instance of the Base class
