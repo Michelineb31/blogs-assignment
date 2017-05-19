@@ -19,8 +19,12 @@
     $f3->route('GET /', function() {
         $view = new View;
         echo $view->render('pages/home.html');         
-        }
-    );
+        });
+    
+    $f3->route('GET /aboutus', function() {
+        $view = new View;
+        echo $view->render('pages/aboutus.html');
+        });
     
     //Run fat free
     $f3->run();

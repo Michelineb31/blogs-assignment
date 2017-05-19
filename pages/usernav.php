@@ -43,10 +43,10 @@ Navigation bar for Micheline's Dating Website
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
           <img id="trumpet"src="images/trumpet.png" alt="trumpet;">
-          <li><a href="#">Home</a></li>
+          <li><a href="./">Home</a></li>
           <li><a href="#">My Blogs</a></li>
           <li><a href="#">Create Blog</a></li>
-          <li><a href="#">About Us</a></li>
+          <li><a href="./aboutus">About Us</a></li>
           <li><a href="#">Logout</a></li>
         </ul>
       </li>

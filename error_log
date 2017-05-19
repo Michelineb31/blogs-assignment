@@ -297,3 +297,9 @@
 [17-May-2017 21:32:40 America/Chicago] [328/blogs-assignment/index.php:25] Base->run()
 [17-May-2017 21:32:41 America/Chicago] HTTP 404 (GET /styles/bootstrap-theme.css.map)
 [17-May-2017 21:32:41 America/Chicago] [328/blogs-assignment/index.php:25] Base->run()
+[18-May-2017 18:53:30 America/Chicago] PHP Parse error:  syntax error, unexpected '$f3' (T_VARIABLE), expecting ',' or ')' in /home/mbourque/public_html/328/blogs-assignment/index.php on line 24
+[18-May-2017 18:54:01 America/Chicago] PHP Parse error:  syntax error, unexpected '$f3' (T_VARIABLE), expecting ',' or ')' in /home/mbourque/public_html/328/blogs-assignment/index.php on line 24
+[18-May-2017 19:22:15 America/Chicago] HTTP 404 (GET /styles/bootstrap.css.map)
+[18-May-2017 19:22:15 America/Chicago] [328/blogs-assignment/index.php:30] Base->run()
+[18-May-2017 19:22:15 America/Chicago] HTTP 404 (GET /styles/bootstrap-theme.css.map)
+[18-May-2017 19:22:15 America/Chicago] [328/blogs-assignment/index.php:30] Base->run()

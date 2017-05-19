@@ -36,16 +36,16 @@ Navigation bar for Micheline's Dating Website
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="#"><h2>Blog Site</h2></a>
+    <a class="navbar-brand" href="./"><h2>Blog Site</h2></a>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
           <img id="trumpet"src="images/trumpet.png" alt="trumpet;">
-          <li><a href="#">Home</a></li>
+          <li><a href="./">Home</a></li>
           <li><a href="#">Become a Blogger</a></li>
-          <li><a href="#">About us</a></li>
+          <li><a href="./aboutus">About us</a></li>
           <li><a href="#">Login</a></li>
         </ul>
       </li>
