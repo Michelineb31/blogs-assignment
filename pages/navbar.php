@@ -27,7 +27,10 @@ Navigation bar for Micheline's Dating Website
     <![endif]-->
 </head>
 <body>
-  <nav class="navbar navbar-default" role="navigation">
+  <div class="container" style="width: 100vw;">
+  <div class="row">
+    <div class="col-sm-2">    
+  <nav class="navbar navbar-default navbar-fixed-left" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -50,5 +53,7 @@ Navigation bar for Micheline's Dating Website
         </ul>
       </li>
     </ul>
+    
   </div><!-- /.navbar-collapse -->
 </nav>
+</div>
