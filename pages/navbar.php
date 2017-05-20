@@ -45,13 +45,11 @@ Navigation bar for Micheline's Dating Website
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
-          <img id="trumpet"src="images/trumpet.png" alt="trumpet;">
-          <li><a href="./">Home</a></li>
-          <li><a href="#">Become a Blogger</a></li>
-          <li><a href="./aboutus">About us</a></li>
-          <li><a href="#">Login</a></li>
-        </ul>
-      </li>
+        <img id="trumpet"src="images/trumpet.png" alt="trumpet;">
+        <li><a href="./">Home</a></li>
+         <li><a href="./becomeablogger">Become a Blogger</a></li>
+        <li><a href="./aboutus">About us</a></li>
+        <li><a href="./login">Login</a></li>
     </ul>
     
   </div><!-- /.navbar-collapse -->

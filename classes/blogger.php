@@ -26,13 +26,13 @@ Class Blogger
     private $_blogs[];
     
     
-    function __construct($username, $email, $bio, $profileImage)
+    function __construct($username="unknown", $email="none", $bio="no bio", $profileImage="default image")
     {
         $this->_username = $username;
         $this->_email = $email;
-        $this->_bio=$bio;
-        $this->_profileImage=$profileImage;
-        $this->_blog[]= $blog[];
+        $this->_bio = $bio;
+        $this->_profileImage = $profileImage;
+        $this->_blogs = array();
            
     }
     
@@ -75,7 +75,7 @@ Class Blogger
      */
     function addBlog($title, $entry)
     {
-        $this->blog[]= new Blogpost($title, $entry);
+        $this->blogs= new Blogpost($title, $entry);
     }
     
     /**
@@ -86,7 +86,7 @@ Class Blogger
      */
     function getAllBlogs()
     {
-        return $this->blogs[];
+        return $this->blogs;
     }
     
     /**
@@ -95,7 +95,7 @@ Class Blogger
      */
     function getRecentBlog()
     {
-        echo end($blog);//orints the last element in an array
+        echo end($blogs);//prints the last element in an array
     }
 
     

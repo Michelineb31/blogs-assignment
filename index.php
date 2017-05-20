@@ -26,5 +26,21 @@
         echo $view->render('pages/aboutus.html');
         });
     
+    $f3->route('GET /becomeablogger', function() {
+        $view = new View;
+        echo $view->render('pages/becomeblogger.html');    
+        });
+    
+    $f3->route('GET /login', function() {
+        $view = new View;
+        echo $view->render('pages/login.html');
+        });
+    
+    $f3->route('GET /createblog', function() {
+        $view = new View;
+        echo $view->render('pages/createblog.html');
+        });
+
+    
     //Run fat free
     $f3->run();
