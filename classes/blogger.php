@@ -19,18 +19,21 @@
 Class Blogger
 {
     //variables
-    protected $fname;
-    protected $lname;
-    protected $numBlogs;
-    protected $photo;
-    protected $recentBlog;
+    private $_username;
+    private $_email;
+    private $_bio;
+    private $_profileImage;
+    private $_blogs[];
     
     
-    function __construct($fname = "unknown", $lname = "unknown")
+    function __construct($username, $email, $bio, $profileImage)
     {
-        $this->fname = $fname;
-        $this->lname = $lname;
-        
+        $this->_username = $username;
+        $this->_email = $email;
+        $this->_bio=$bio;
+        $this->_profileImage=$profileImage;
+        $this->_blog[]= $blog[];
+           
     }
     
     /**
@@ -38,118 +41,62 @@ Class Blogger
      *stored as the bloggers first name
      *@return The bloggers first name
      **/
-    function getFName()
+    function getUsername()
     {
-        return $this->fname;
+        return $this->_username;
     }
     
     /**
      *This function gets the value that is
-     *stored as the bloggers last name
-     *@return The bloggers last name
+     *stored as the bloggers bio
+     *@return the bloggers bio
      **/
-    function getLName()
+    function getBio()
     {
-        return $this->lname;
+        return $this->_bio;
     }
     
     /**
      *This function gets the value that is
-     *stored as the number of blogs the
-     *blogger has posted
-     *@return the number of blog posts
+     *stored as the file path for the profile image
+     *
+     *@return the file path for the profile image
      */
-    function getNumBlogs()
+    function getProfileImage()
     {
-        return $this->numBlogs;
+        return $this->_profileImage;
     }
     
     /**
-     *This function gets the name of the
-     *file that is stored for the
-     *bloggers profile photo
-     *@return bloggers profile photo
-     **/
-    function getPhoto()
+     *This function adds a blog
+     *that contains a title and entry.
+     *
+     *@param title of the blog and the entry for the blog
+     */
+    function addBlog($title, $entry)
     {
-        return $this->photo;
+        $this->blog[]= new Blogpost($title, $entry);
     }
     
     /**
-     *This function get the most recent
-     *blog that the blogger has posted
-     *@return most recent blog
+     *This function returns all
+     *of the blogs.
+     *
+     *@return array of blogs
+     */
+    function getAllBlogs()
+    {
+        return $this->blogs[];
+    }
+    
+    /**
+     *This function returns
+     *the last element in the blogs array
      */
     function getRecentBlog()
     {
-        return $this->recentBlog;
+        echo end($blog);//orints the last element in an array
     }
+
     
-    /**
-    *
-    * This function sets the first name
-    * of the blogger.
-    *
-    * @param type $fname first name of the blogger
-    *
-    */    
-    function setFName($fname)
-    {
-        if (!ctype_alpha($fname)) {
-            $this->lname = null;
-        } else {
-            $this->lname = $fname;            
-        }
-    }
     
-    /**
-    *
-    * This function sets the last name
-    * of the blogger.
-    *
-    * @param type $lname last name of the blogger
-    *
-    */    
-    function setLName($lname)
-    {
-        if (!ctype_alpha($lname)) {
-            $this->lname = null;
-        } else {
-            $this->lname = $lname;            
-        }
-    }
-    
-    /**
-    *
-    * This function sets the number of blogs
-    * that the blogger has posted
-    *
-    * @param type $numBlogs number of blogs the blogger posted
-    *
-    */    
-    function setNumBlogs($numBlogs)
-    {
-            $this->numBlogs = $numBlogs;            
-    }
-    
-    /**
-     *This function sets the file name for the photo that
-     *the blogger uses as their profile picture
-     *
-     *@param type $photo file name for image the blogger has uploaded
-     */
-    function setPhoto($photo)
-    {
-        $this->photo = $photo;
-    }
-    
-    /**
-     *This function sets the most recent blog post
-     *that the blogger has posted
-     *
-     *@param type $recentBlog is the most recent blog posted
-     */
-    function setRecentBlog($recentBlog)
-    {
-        $this->recentBlog = $recentBlog;
-    }
