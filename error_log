@@ -588,3 +588,125 @@
 [21-May-2017 14:45:45 America/Chicago] [328/blogs-assignment/index.php:62] Base->run()
 [21-May-2017 14:45:45 America/Chicago] HTTP 404 (GET /styles/bootstrap-theme.css.map)
 [21-May-2017 14:45:45 America/Chicago] [328/blogs-assignment/index.php:62] Base->run()
+[21-May-2017 15:36:13 America/Chicago] Class 'Controller' not found [/home/mbourque/public_html/328/blogs-assignment/index.php:20]
+[21-May-2017 15:36:13 America/Chicago] [328/blogs-assignment/index.php:65] Base->run()
+[21-May-2017 15:37:39 America/Chicago] Class 'Controller' not found [/home/mbourque/public_html/328/blogs-assignment/index.php:20]
+[21-May-2017 15:37:39 America/Chicago] [328/blogs-assignment/index.php:65] Base->run()
+[21-May-2017 15:37:42 America/Chicago] Class 'Controller' not found [/home/mbourque/public_html/328/blogs-assignment/index.php:20]
+[21-May-2017 15:37:42 America/Chicago] [328/blogs-assignment/index.php:65] Base->run()
+[21-May-2017 15:39:58 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function route() on null in /home/mbourque/public_html/328/blogs-assignment/index.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/mbourque/public_html/328/blogs-assignment/index.php on line 19
+[21-May-2017 15:40:48 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function route() on null in /home/mbourque/public_html/328/blogs-assignment/index.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/mbourque/public_html/328/blogs-assignment/index.php on line 19
+[21-May-2017 15:44:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function route() on null in /home/mbourque/public_html/328/blogs-assignment/index.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/mbourque/public_html/328/blogs-assignment/index.php on line 19
+[21-May-2017 15:49:39 America/Chicago] Class 'DataLayer' not found [/home/mbourque/public_html/328/blogs-assignment/controller/controller.php:16]
+[21-May-2017 15:49:39 America/Chicago] [328/blogs-assignment/index.php:24] Controller->homepage()
+[21-May-2017 15:49:39 America/Chicago] [328/blogs-assignment/index.php:71] Base->run()
+[21-May-2017 15:50:29 America/Chicago] syntax error, unexpected '?' [/home/mbourque/public_html/328/blogs-assignment/tmp/181sd005gmak9.1s33lx129wxjx.php:8]
+[21-May-2017 15:50:29 America/Chicago] [328/blogs-assignment/controller/controller.php:24] Preview->render()
+[21-May-2017 15:50:29 America/Chicago] [328/blogs-assignment/index.php:24] Controller->homepage()
+[21-May-2017 15:50:29 America/Chicago] [328/blogs-assignment/index.php:71] Base->run()
+[21-May-2017 15:52:06 America/Chicago] syntax error, unexpected '?' [/home/mbourque/public_html/328/blogs-assignment/tmp/181sd005gmak9.1s33lx129wxjx.php:8]
+[21-May-2017 15:52:06 America/Chicago] [328/blogs-assignment/controller/controller.php:24] Preview->render()
+[21-May-2017 15:52:06 America/Chicago] [328/blogs-assignment/index.php:24] Controller->homepage()
+[21-May-2017 15:52:06 America/Chicago] [328/blogs-assignment/index.php:71] Base->run()
+[21-May-2017 15:52:12 America/Chicago] syntax error, unexpected '?' [/home/mbourque/public_html/328/blogs-assignment/tmp/181sd005gmak9.1s33lx129wxjx.php:8]
+[21-May-2017 15:52:12 America/Chicago] [328/blogs-assignment/controller/controller.php:24] Preview->render()
+[21-May-2017 15:52:12 America/Chicago] [328/blogs-assignment/index.php:24] Controller->homepage()
+[21-May-2017 15:52:12 America/Chicago] [328/blogs-assignment/index.php:71] Base->run()
+[21-May-2017 15:52:22 America/Chicago] syntax error, unexpected '?' [/home/mbourque/public_html/328/blogs-assignment/tmp/181sd005gmak9.1s33lx129wxjx.php:8]
+[21-May-2017 15:52:22 America/Chicago] [328/blogs-assignment/controller/controller.php:24] Preview->render()
+[21-May-2017 15:52:22 America/Chicago] [328/blogs-assignment/index.php:24] Controller->homepage()
+[21-May-2017 15:52:22 America/Chicago] [328/blogs-assignment/index.php:71] Base->run()
+[21-May-2017 15:53:20 America/Chicago] syntax error, unexpected '?' [/home/mbourque/public_html/328/blogs-assignment/tmp/181sd005gmak9.1s33lx129wxjx.php:8]
+[21-May-2017 15:53:20 America/Chicago] [328/blogs-assignment/controller/controller.php:24] Preview->render()
+[21-May-2017 15:53:20 America/Chicago] [328/blogs-assignment/index.php:24] Controller->homepage()
+[21-May-2017 15:53:20 America/Chicago] [328/blogs-assignment/index.php:71] Base->run()
+[21-May-2017 15:53:23 America/Chicago] syntax error, unexpected '?' [/home/mbourque/public_html/328/blogs-assignment/tmp/181sd005gmak9.1s33lx129wxjx.php:8]
+[21-May-2017 15:53:23 America/Chicago] [328/blogs-assignment/controller/controller.php:24] Preview->render()
+[21-May-2017 15:53:23 America/Chicago] [328/blogs-assignment/index.php:24] Controller->homepage()
+[21-May-2017 15:53:23 America/Chicago] [328/blogs-assignment/index.php:71] Base->run()
+[21-May-2017 15:53:26 America/Chicago] syntax error, unexpected '?' [/home/mbourque/public_html/328/blogs-assignment/tmp/181sd005gmak9.1s33lx129wxjx.php:8]
+[21-May-2017 15:53:26 America/Chicago] [328/blogs-assignment/controller/controller.php:24] Preview->render()
+[21-May-2017 15:53:26 America/Chicago] [328/blogs-assignment/index.php:24] Controller->homepage()
+[21-May-2017 15:53:26 America/Chicago] [328/blogs-assignment/index.php:71] Base->run()
+[21-May-2017 16:48:31 America/Chicago] syntax error, unexpected 'PDO' (T_STRING), expecting ',' or ')' [/home/mbourque/public_html/328/blogs-assignment/model/blogsdb.php:57]
+[21-May-2017 16:48:31 America/Chicago] [328/blogs-assignment/vendor/composer/ClassLoader.php:322] Composer\Autoload\includeFile()
+[21-May-2017 16:48:31 America/Chicago] [328/blogs-assignment/index.php:15] spl_autoload_call()
+[21-May-2017 16:49:16 America/Chicago] syntax error, unexpected 'PDO' (T_STRING), expecting ',' or ')' [/home/mbourque/public_html/328/blogs-assignment/model/blogsdb.php:58]
+[21-May-2017 16:49:16 America/Chicago] [328/blogs-assignment/vendor/composer/ClassLoader.php:322] Composer\Autoload\includeFile()
+[21-May-2017 16:49:16 America/Chicago] [328/blogs-assignment/index.php:15] spl_autoload_call()
+[21-May-2017 17:01:59 America/Chicago] HTTP 404 (GET /becomeablogger)
+[21-May-2017 17:01:59 America/Chicago] [328/blogs-assignment/index.php:75] Base->run()
+[21-May-2017 17:02:32 America/Chicago] HTTP 404 (GET /becomeablogger)
+[21-May-2017 17:02:32 America/Chicago] [328/blogs-assignment/index.php:75] Base->run()
+[21-May-2017 17:04:08 America/Chicago] HTTP 404 (GET /becomeablogger)
+[21-May-2017 17:04:08 America/Chicago] [328/blogs-assignment/index.php:75] Base->run()
+[21-May-2017 17:04:32 America/Chicago] HTTP 404 (GET /becomeablogger)
+[21-May-2017 17:04:32 America/Chicago] [328/blogs-assignment/index.php:75] Base->run()
+[21-May-2017 17:05:12 America/Chicago] HTTP 404 (GET /becomeblogger)
+[21-May-2017 17:05:12 America/Chicago] [328/blogs-assignment/index.php:75] Base->run()
+[21-May-2017 17:05:48 America/Chicago] HTTP 404 (GET /becomeblogger)
+[21-May-2017 17:05:48 America/Chicago] [328/blogs-assignment/index.php:75] Base->run()
+[21-May-2017 17:07:56 America/Chicago] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'NULL, NULL)' at line 2 [/home/mbourque/public_html/328/blogs-assignment/model/blogsdb.php:61]
+[21-May-2017 17:07:56 America/Chicago] [328/blogs-assignment/model/blogsdb.php:61] PDOStatement->execute()
+[21-May-2017 17:07:56 America/Chicago] [328/blogs-assignment/controller/controller.php:35] BlogsDB->addBlogger()
+[21-May-2017 17:07:56 America/Chicago] [328/blogs-assignment/index.php:37] Controller->submitCreateAccount()
+[21-May-2017 17:07:56 America/Chicago] [328/blogs-assignment/index.php:75] Base->run()
+[21-May-2017 17:13:53 America/Chicago] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'NULL, NULL)' at line 2 [/home/mbourque/public_html/328/blogs-assignment/model/blogsdb.php:63]
+[21-May-2017 17:13:53 America/Chicago] [328/blogs-assignment/model/blogsdb.php:63] PDOStatement->execute()
+[21-May-2017 17:13:53 America/Chicago] [328/blogs-assignment/controller/controller.php:35] BlogsDB->addBlogger()
+[21-May-2017 17:13:53 America/Chicago] [328/blogs-assignment/index.php:37] Controller->submitCreateAccount()
+[21-May-2017 17:13:53 America/Chicago] [328/blogs-assignment/index.php:75] Base->run()
+[21-May-2017 17:14:52 America/Chicago] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'NULL, NULL)' at line 2 [/home/mbourque/public_html/328/blogs-assignment/model/blogsdb.php:64]
+[21-May-2017 17:14:52 America/Chicago] [328/blogs-assignment/model/blogsdb.php:64] PDOStatement->execute()
+[21-May-2017 17:14:52 America/Chicago] [328/blogs-assignment/controller/controller.php:35] BlogsDB->addBlogger()
+[21-May-2017 17:14:52 America/Chicago] [328/blogs-assignment/index.php:37] Controller->submitCreateAccount()
+[21-May-2017 17:14:52 America/Chicago] [328/blogs-assignment/index.php:75] Base->run()
+[21-May-2017 17:15:05 America/Chicago] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'NULL, NULL)' at line 2 [/home/mbourque/public_html/328/blogs-assignment/model/blogsdb.php:64]
+[21-May-2017 17:15:05 America/Chicago] [328/blogs-assignment/model/blogsdb.php:64] PDOStatement->execute()
+[21-May-2017 17:15:05 America/Chicago] [328/blogs-assignment/controller/controller.php:35] BlogsDB->addBlogger()
+[21-May-2017 17:15:05 America/Chicago] [328/blogs-assignment/index.php:37] Controller->submitCreateAccount()
+[21-May-2017 17:15:05 America/Chicago] [328/blogs-assignment/index.php:75] Base->run()
+[21-May-2017 17:17:16 America/Chicago] SQLSTATE[42000]: Syntax error or access violation: 1142 INSERT command denied to user 'mbourque_blog'@'localhost' for table 'bloggers' [/home/mbourque/public_html/328/blogs-assignment/model/blogsdb.php:64]
+[21-May-2017 17:17:16 America/Chicago] [328/blogs-assignment/model/blogsdb.php:64] PDOStatement->execute()
+[21-May-2017 17:17:16 America/Chicago] [328/blogs-assignment/controller/controller.php:35] BlogsDB->addBlogger()
+[21-May-2017 17:17:16 America/Chicago] [328/blogs-assignment/index.php:37] Controller->submitCreateAccount()
+[21-May-2017 17:17:16 America/Chicago] [328/blogs-assignment/index.php:75] Base->run()
+[21-May-2017 17:19:29 America/Chicago] SQLSTATE[42000]: Syntax error or access violation: 1142 INSERT command denied to user 'mbourque_blog'@'localhost' for table 'bloggers' [/home/mbourque/public_html/328/blogs-assignment/model/blogsdb.php:65]
+[21-May-2017 17:19:29 America/Chicago] [328/blogs-assignment/model/blogsdb.php:65] PDOStatement->execute()
+[21-May-2017 17:19:29 America/Chicago] [328/blogs-assignment/controller/controller.php:36] BlogsDB->addBlogger()
+[21-May-2017 17:19:29 America/Chicago] [328/blogs-assignment/index.php:37] Controller->submitCreateAccount()
+[21-May-2017 17:19:29 America/Chicago] [328/blogs-assignment/index.php:75] Base->run()
+[21-May-2017 17:22:57 America/Chicago] SQLSTATE[42000]: Syntax error or access violation: 1142 INSERT command denied to user 'mbourque_blog'@'localhost' for table 'bloggers' [/home/mbourque/public_html/328/blogs-assignment/model/blogsdb.php:66]
+[21-May-2017 17:22:57 America/Chicago] [328/blogs-assignment/model/blogsdb.php:66] PDOStatement->execute()
+[21-May-2017 17:22:57 America/Chicago] [328/blogs-assignment/controller/controller.php:36] BlogsDB->addBlogger()
+[21-May-2017 17:22:57 America/Chicago] [328/blogs-assignment/index.php:37] Controller->submitCreateAccount()
+[21-May-2017 17:22:57 America/Chicago] [328/blogs-assignment/index.php:75] Base->run()
+[21-May-2017 17:32:47 America/Chicago] SQLSTATE[42000]: Syntax error or access violation: 1142 INSERT command denied to user 'mbourque_blog'@'localhost' for table 'bloggers' [/home/mbourque/public_html/328/blogs-assignment/model/blogsdb.php:66]
+[21-May-2017 17:32:47 America/Chicago] [328/blogs-assignment/model/blogsdb.php:66] PDOStatement->execute()
+[21-May-2017 17:32:47 America/Chicago] [328/blogs-assignment/controller/controller.php:36] BlogsDB->addBlogger()
+[21-May-2017 17:32:47 America/Chicago] [328/blogs-assignment/index.php:37] Controller->submitCreateAccount()
+[21-May-2017 17:32:47 America/Chicago] [328/blogs-assignment/index.php:75] Base->run()
+[21-May-2017 17:33:52 America/Chicago] Missing argument 1 for BlogsDB::addBlogger(), called in /home/mbourque/public_html/328/blogs-assignment/controller/controller.php on line 36 and defined
+[21-May-2017 17:33:52 America/Chicago] [328/blogs-assignment/model/blogsdb.php:48] Base->{closure}()
+[21-May-2017 17:33:52 America/Chicago] [328/blogs-assignment/controller/controller.php:36] BlogsDB->addBlogger()
+[21-May-2017 17:33:52 America/Chicago] [328/blogs-assignment/index.php:37] Controller->submitCreateAccount()
+[21-May-2017 17:33:52 America/Chicago] [328/blogs-assignment/index.php:75] Base->run()
+[21-May-2017 17:37:24 America/Chicago] SQLSTATE[42000]: Syntax error or access violation: 1142 INSERT command denied to user 'mbourque_blog'@'localhost' for table 'bloggers' [/home/mbourque/public_html/328/blogs-assignment/model/blogsdb.php:67]
+[21-May-2017 17:37:24 America/Chicago] [328/blogs-assignment/model/blogsdb.php:67] PDOStatement->execute()
+[21-May-2017 17:37:24 America/Chicago] [328/blogs-assignment/controller/controller.php:36] BlogsDB->addBlogger()
+[21-May-2017 17:37:24 America/Chicago] [328/blogs-assignment/index.php:37] Controller->submitCreateAccount()
+[21-May-2017 17:37:24 America/Chicago] [328/blogs-assignment/index.php:75] Base->run()
+[21-May-2017 17:40:55 America/Chicago] SQLSTATE[42000]: Syntax error or access violation: 1142 INSERT command denied to user 'mbourque_blog'@'localhost' for table 'bloggers' [/home/mbourque/public_html/328/blogs-assignment/model/blogsdb.php:69]
+[21-May-2017 17:40:55 America/Chicago] [328/blogs-assignment/model/blogsdb.php:69] PDOStatement->execute()
+[21-May-2017 17:40:55 America/Chicago] [328/blogs-assignment/controller/controller.php:36] BlogsDB->addBlogger()
+[21-May-2017 17:40:55 America/Chicago] [328/blogs-assignment/index.php:37] Controller->submitCreateAccount()
+[21-May-2017 17:40:55 America/Chicago] [328/blogs-assignment/index.php:75] Base->run()

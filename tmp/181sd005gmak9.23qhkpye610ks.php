@@ -1,6 +1,6 @@
  <body>
    <div class="row">
-      <form action="{{ @BASE }}/submitcreateaccount" method ="POST" enctype="multipart/form-data">
+      <form action="<?= $BASE ?>/submitcreateaccount" method ="POST" enctype="multipart/form-data">
          <div class="col-sm-6 col-span-6" id="vertical">
             <div class="form-group required">
                <label class="control-label col-sm-12">Username </label>

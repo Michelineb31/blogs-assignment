@@ -18,6 +18,7 @@ class ComposerStaticInit5e9dc17f5a0b2178c713b4f91c8a7d5f
         'CLI\\Agent' => __DIR__ . '/..' . '/bcosca/fatfree-core/cli/ws.php',
         'CLI\\WS' => __DIR__ . '/..' . '/bcosca/fatfree-core/cli/ws.php',
         'Cache' => __DIR__ . '/..' . '/bcosca/fatfree-core/base.php',
+        'Controller' => __DIR__ . '/../..' . '/controller/controller.php',
         'DB\\Cursor' => __DIR__ . '/..' . '/bcosca/fatfree-core/db/cursor.php',
         'DB\\Jig' => __DIR__ . '/..' . '/bcosca/fatfree-core/db/jig.php',
         'DB\\Jig\\Mapper' => __DIR__ . '/..' . '/bcosca/fatfree-core/db/jig/mapper.php',

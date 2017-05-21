@@ -2,29 +2,42 @@
 
     //Require the autoload file
     require_once('vendor/autoload.php');
+	$f3 = require_once('vendor/bcosca/fatfree-core/base.php');
+	
 
     
-    session_start();
-    
-    //need to make this only for when users are not logged in
-    include_once('view/navbar.php');
-    
+    //session_start();
+
     //Create an instance of the Base class
-    $f3 = Base::instance();
+    //$f3 = Base::instance();
 
     //Instantiate the database class
     $blogsDB = new BlogsDB();
     
-    //Define a default route
-    $f3->route('GET /', function($f3) {
-        $controller = new Controller($f3);
-		$controller->homepage();  
-		
-      
-    
-       });
 	
 	$f3->set('header', 'view/header.php');
+	
+
+    // home.php
+    $f3->route('GET /',function($f3) {
+        $controller = new Controller($f3);
+		$controller->homepage();  
+    
+    });
+	
+	//becomeblogger.php
+	$f3->route('GET /createbloggerpage', function($f3) {
+		$controller = new Controller($f3);
+		$controller->createBloggerPage();  
+
+        });
+	
+	$f3->route('POST /submitcreateaccount', function($f3) {
+		$controller = new Controller($f3);
+		$controller->submitCreateAccount(); 
+		});
+	
+	
     /*
     
     $f3->route('GET /aboutus', function() {
@@ -33,10 +46,7 @@
         });
         */
     
-    $f3->route('GET /becomeablogger', function() {
-
-        echo Template::instance()->render('view/becomeblogger.php');   
-        });
+    
 	/*
     
     $f3->route('GET /login', function() {

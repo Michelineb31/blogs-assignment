@@ -1,4 +1,6 @@
 <?php
+
+
     /*
      *This file provides access to the bloggers
      *in the database.
@@ -20,6 +22,7 @@
         {
             //Require configuration file
             require_once '/home/mbourque/blogsconfig.php';
+            
             
             try {
                 //Establish database connection
@@ -45,24 +48,96 @@
          *
          *@return the id of the last inserted row
          */
-        function addBlogger($blogger)
+        function addBlogger()
         {
-            $insert = 'INSERT INTO bloggers (username, email, profileImage, bio)
-            VALUES (:username, :email, :profileImage, :bio)';
+            echo '<pre>';
+            
+            var_dump($_POST);
+            var_dump($_FILES['pic']['name']);
+            echo '</pre>';
+            
+            $insert = 'INSERT INTO bloggers(username, email, password, profile_image, bio)
+            VALUES (:username, :email, :password, :profile_image, :bio)';
             
             $statement = $this->_pdo->prepare($insert);
             
-            $statement->bindValue(':username', $blogger->getUsername(), PDO::PARAM_STR);
-            $statement->bindValue(':email', $blogger->getEmail(), PDO::PARAM_STR);
-            //$statement->bindValue(':password', $blogger->getPassword(), PDO::PARAM_STR);
-            $statement->bindValue(':profileImage', $blogger->getProfileImage(), PDO::PARAM_STR); 
-            $statement->bindValue(':bio', $blogger->getBio(), PDO::PARAM_STR);
+            $statement->bindValue(':username', $_POST['username'], PDO::PARAM_STR);
+            $statement->bindValue(':email', $_POST['email'], PDO::PARAM_STR);
+            $statement->bindValue(':password', $_POST['password'], PDO::PARAM_STR);
+            $statement->bindValue(':profile_image', 'images/'.$_FILES['pic']['name'], PDO::PARAM_STR); 
+            $statement->bindValue(':bio', $_POST['biography'], PDO::PARAM_STR);
             
             $statement->execute();
             
             //Return ID of inserted row
-            return $this->_pdo->lastInsertId();
+            //return $this->_pdo->lastInsertId();
         
+        }
+        
+        //this accepts an image file from the users post
+        //and stores it into images folder
+        function uploadProfileImage()
+        {
+            $errors = array();//check to insurance file is actually an image file
+            $targer_directory ="images/";
+            $target_file =$target_directory . basename($_FILES['pic']['name']);
+            $uploadOK = 1;
+            $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
+            
+            //check if actual image
+            if(isset($_POST['submit'])){
+                
+                $check = getimagesize($_FILES['pic']['tmp_name']);
+                
+                if($check != false){
+                    echo "File is an image - " . check["mime"] . ".";
+                    $uploadOK = 1;
+                } else{
+                    $errors[] = "File us not an image";
+                    $uploadOK = 0;          
+                }
+            }
+            //check if the file already exists
+            if(file_exists($target_file)){
+                $errors[] = "File already exists.";
+                $uploadOK = 0;
+            }
+            //check size of file
+            if($_FILES['pic']['size'] > 200000){
+                $errors[] = "Image size is too large";
+                
+                $uploadOK = 0;
+            }
+            //allow these file formats
+            if($imageFileType != "jpg" && $imageFileType != "jpeg"
+               && $imageFileType != "gif"){
+                $errors[]="Only JPG, PNG, JPEG, GIF are allowed";
+                $uploadOK = 0;
+            }
+            
+            //check if $uploadOK nis set to 0 by error
+            if($uploadOK == 0){
+                $errors[] = "File not uploaded";
+                //if all is ok try to upload file
+            } else{
+                if(move_uploaded_file($_FILES['pic']["tmp_name"], $target_file)){
+                    return true;
+                } else{
+                    $errors[] ="Error uploading file";
+                
+                }
+            }
+        }
+        
+        public function errors(){
+            if(sizeof($errors) > 0){
+                echo '<div class="alert alert-danger">
+                <strong> Uploading error</strong>';
+                foreach($errors as $error){
+                    echo"$error";
+                }
+                echo '</div></div>';
+            }
         }
         
         function allBloggers() {
