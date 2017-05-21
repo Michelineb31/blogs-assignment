@@ -12,6 +12,7 @@ return array(
     'Basket' => $vendorDir . '/bcosca/fatfree-core/basket.php',
     'Bcrypt' => $vendorDir . '/bcosca/fatfree-core/bcrypt.php',
     'Blogger' => $baseDir . '/classes/blogger.php',
+    'Blogpost' => $baseDir . '/classes/blogpost.php',
     'BlogsDB' => $baseDir . '/model/blogsdb.php',
     'CLI\\Agent' => $vendorDir . '/bcosca/fatfree-core/cli/ws.php',
     'CLI\\WS' => $vendorDir . '/bcosca/fatfree-core/cli/ws.php',

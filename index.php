@@ -7,7 +7,7 @@
     session_start();
     
     //need to make this only for when users are not logged in
-    include_once('pages/navbar.php');
+    include_once('view/navbar.php');
     
     //Create an instance of the Base class
     $f3 = Base::instance();
@@ -16,34 +16,50 @@
     $blogsDB = new BlogsDB();
     
     //Define a default route
-    $f3->route('GET /', function() {
-        ///$f3->set('bloggers', array('http://www.cnet.com',
-        //                            'http://www.reddit.com',
-         //                           'http://www.cnn.com'));
-        $view = new View;
-        echo $view->render('pages/home.html');         
-        });
+    $f3->route('GET /', function($f3) {
+        $controller = new Controller($f3);
+		$controller->homepage();  
+		
+      
+    
+       });
+	
+	$f3->set('header', 'view/header.php');
+    /*
     
     $f3->route('GET /aboutus', function() {
-        $view = new View;
-        echo $view->render('pages/aboutus.html');
+
+        echo Template::instance()->render('pages/aboutus.html');
         });
+        */
     
     $f3->route('GET /becomeablogger', function() {
-        $view = new View;
-        echo $view->render('pages/becomeblogger.html');    
+
+        echo Template::instance()->render('view/becomeblogger.php');   
         });
+	/*
     
     $f3->route('GET /login', function() {
-        $view = new View;
-        echo $view->render('pages/login.html');
+;
+        echo Template::instance()->render('pages/login.html');
         });
     
     $f3->route('GET /createblog', function() {
-        $view = new View;
-        echo $view->render('pages/createblog.html');
-        });
 
+        echo Template::instance()->render('pages/createblog.html');
+        });
+    
+    $f3->route('GET /profile/@username, function($f3, $params') {
+        //$f3->set('blogger', $GLOBALS['blogsDB']->getUsername($params['username']));
+		
+		$f3->set('blogpost', $GLOBALS['blogsDB']->getAllBlogs($params['username']));
+		
+		echo Template::instance()->render('pages/profile.html');   
+    }
+    
+    //$f3->route('GET /blog/@username') need to finish this....not sure how to call certian blog unless add bog id to table
+    
+    */
     
     //Run fat free
     $f3->run();
