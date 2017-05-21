@@ -17,6 +17,9 @@
     
     //Define a default route
     $f3->route('GET /', function() {
+        ///$f3->set('bloggers', array('http://www.cnet.com',
+        //                            'http://www.reddit.com',
+         //                           'http://www.cnn.com'));
         $view = new View;
         echo $view->render('pages/home.html');         
         });

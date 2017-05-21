@@ -12,6 +12,10 @@
     {
         private $_pdo;
         
+        /**
+         *This is a constructor that constructs a
+         *PHP Database Object.
+         */
         function __construct()
         {
             //Require configuration file
@@ -43,16 +47,16 @@
          */
         function addBlogger($blogger)
         {
-            $insert = 'INSERT INTO bloggers (fname, lname, numBlogs, photo, recentblog)
-            VALUES (:fname, :lname, :numBlogs, :photo, :recentBlog)';
+            $insert = 'INSERT INTO bloggers (username, email, profileImage, bio)
+            VALUES (:username, :email, :profileImage, :bio)';
             
             $statement = $this->_pdo->prepare($insert);
             
-            $statement->bindValue(':fname', $blogger->getFName(), PDO::PARAM_STR);
-            $statement->bindValue(':lname', $blogger->getLName(), PDO::PARAM_STR);
-            $statement->bindValue(':photo', $blogger->getPhoto(), PDO::PARAM_STR);
-            $statement->bindValue(':numBlogs', 0, PDO::PARAM_INT); 
-            $statement->bindValue(':recentBlog', $blogger->getRecentBlog(), PDO::PARAM_STR);
+            $statement->bindValue(':username', $blogger->getUsername(), PDO::PARAM_STR);
+            $statement->bindValue(':email', $blogger->getEmail(), PDO::PARAM_STR);
+            //$statement->bindValue(':password', $blogger->getPassword(), PDO::PARAM_STR);
+            $statement->bindValue(':profileImage', $blogger->getProfileImage(), PDO::PARAM_STR); 
+            $statement->bindValue(':bio', $blogger->getBio(), PDO::PARAM_STR);
             
             $statement->execute();
             
@@ -61,7 +65,33 @@
         
         }
         
+        function allBloggers() {
+            $select = 'SELECT username, profileImage, bio FROM bloggers';
+            $results = $this->_pdo->query($select);
+            
+            $resultsArray = array();
+            
+            //map each blogger to a row of data for that blogger
+            while ($row = $results->fetch(PDO::FETCH_ASSOC)) {
+                $resultsArray[$row['username']] = $row;
+            }
+             
+            return $resultsArray;
+            
+        }
         
+        function userBlogs($username) {
+            $select = 'SELECT username, title, entry, date FROM blogposts WHERE username = $username ORDER BY date';
+            $results = $this->_pdo->query($select);
+            
+            $resultsArray = array();
+            
+            while ($row = $results->fetch(PDO::FETCH_ASSOC)) {
+                $resultsArray[$row['username']] = $row;
+            }
+            
+            return $resultsArray;
+        }
         
         
         /**
@@ -71,6 +101,8 @@
          *
          *@param id of the blogger
          */
+        
+         /*took out blogger id....if have to put back.....
         function updateNumBlogs($blogger_id)
         {
             $update = 'UPDATE bloggers
@@ -82,5 +114,6 @@
             
             $statement->execute();
         }
+        */
            
     }
