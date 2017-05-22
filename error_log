@@ -801,3 +801,17 @@ Stack trace:
 [21-May-2017 22:59:07 America/Chicago] [328/blogs-assignment/controller/controller.php:69] BlogsDB->addBlog()
 [21-May-2017 22:59:07 America/Chicago] [328/blogs-assignment/index.php:48] Controller->createBlogEntry()
 [21-May-2017 22:59:07 America/Chicago] [328/blogs-assignment/index.php:97] Base->run()
+[21-May-2017 23:05:31 America/Chicago] Missing argument 1 for BlogsDB::addBlog(), called in /home/mbourque/public_html/328/blogs-assignment/controller/controller.php on line 69 and defined
+[21-May-2017 23:05:31 America/Chicago] [328/blogs-assignment/model/blogsdb.php:187] Base->{closure}()
+[21-May-2017 23:05:31 America/Chicago] [328/blogs-assignment/controller/controller.php:69] BlogsDB->addBlog()
+[21-May-2017 23:05:31 America/Chicago] [328/blogs-assignment/index.php:48] Controller->createBlogEntry()
+[21-May-2017 23:05:31 America/Chicago] [328/blogs-assignment/index.php:97] Base->run()
+[21-May-2017 23:05:58 America/Chicago] HTTP 404 (GET /styles/bootstrap.css.map)
+[21-May-2017 23:05:58 America/Chicago] [328/blogs-assignment/index.php:97] Base->run()
+[21-May-2017 23:05:58 America/Chicago] HTTP 404 (GET /styles/bootstrap-theme.css.map)
+[21-May-2017 23:05:58 America/Chicago] [328/blogs-assignment/index.php:97] Base->run()
+[21-May-2017 23:06:38 America/Chicago] Missing argument 1 for BlogsDB::addBlog(), called in /home/mbourque/public_html/328/blogs-assignment/controller/controller.php on line 69 and defined
+[21-May-2017 23:06:38 America/Chicago] [328/blogs-assignment/model/blogsdb.php:187] Base->{closure}()
+[21-May-2017 23:06:38 America/Chicago] [328/blogs-assignment/controller/controller.php:69] BlogsDB->addBlog()
+[21-May-2017 23:06:38 America/Chicago] [328/blogs-assignment/index.php:48] Controller->createBlogEntry()
+[21-May-2017 23:06:38 America/Chicago] [328/blogs-assignment/index.php:97] Base->run()

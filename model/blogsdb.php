@@ -168,30 +168,16 @@
             return $resultsArray;
         }
         
-        /*if top one is not working properly come back to this one
-         *function addBlogger($username, $email, $password, $profileImage, $bio) {
-            $insert = 'INSERT INTO bloggers (username, email, password, profileImage, bio)
-            VALUES (:username, :email, :password, :profileImage, :bio)';
-            
-            $statement = $this->_pdo->prepare($insert);
-            $statement->bindvalue(':username', $username, PDO::PARAM_STR);
-            $statement->bindvalue(':email', $email, PDO::PARAM_STR);
-            $statement->bindvalue(':password', $password, PDO::PARAM_STR);
-            $statement->bindvalue(':profileImage', $profileImage, PDO::PARAM_STR);
-            $statement->bindvalue(':bio', $bio, PDO::PARAM_STR);
-            
-            $statement->execute;
-        }
-        */
         
-        function addBlog($username, $title, $entry) {
-            var_dump($username, $title, $entry);
+        function addBlog($username) {
+            var_dump($username);
             $insert = 'INSERT INTO blogposts (username, title, entry) VALUES (:username, :title, :entry)';
             
             $statement = $this->_pdo->prepare($insert);
-            $statement->bindvalue(':username', $username, PDO::PARAM_STR);
-            $statement->bindvalue(':title', $title, PDO::PARAM_STR);
-            $statement->bindvalue(':entry', $entry, PDO::PARAM_STR);
+            $statement->bindValue(':username', $_POST['username'], PDO::PARAM_STR);
+            $statement->bindValue(':title', $_POST['entry'], PDO::PARAM_STR);
+            $statement->bindValue(':entry', $_POST['entry'], PDO::PARAM_STR);
+  
             
             
             $statement->execute();
