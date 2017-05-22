@@ -36,23 +36,29 @@ class Controller
         $createBlogger = $data->addBlogger();
         $addProfileImage = $data->uploadProfileImage();
         
-       // echo '<pre>';
-       // var_dump($addProfileImage);
+        //$_SESSION['username'] = $_POST['username'];
+        //echo '<pre>';
+        //var_dump('test here' .$_SESSION['username']);
         //echo'</pre>';
         
-        //f($addProfileImage != null){
-        //    $_SESSION['username'] = $_POST['username'];
-        //   $_SESSION['loggedIn'] = true;
+        if($addProfileImage){
+           $_SESSION['username'] = $_POST['username'];
+           $_SESSION['loggedIn'] = true;
             
             //redirect
             $this->_f3->reroute('/createablog');
-        //} else {
-           // $this->_f3->reroute('/createbloggerpage');
-        //}   
+        } else {
+          $this->_f3->reroute('/createbloggerpage');
+        }   
     }
     
     public function blogEntry()
     {
+        $this->_f3->set('username', $_SESSION['username']);
+        echo '<pre>';
+            var_dump('test session' . $_SESSION['username']);
+        echo'</pre>';
+        
         echo Template::instance()->render('view/createablog.php'); 
     }
     
@@ -71,12 +77,9 @@ class Controller
     {
         $data = new BlogsDB();
         $createBlogEntry = $data->addBlog();
-        var_dump($creatBlogEntry);
         
-        //echo Template::instance()->render('view/createablog.php');
         
-    
-        
+        //echo Template::instance()->render('view/createablog.php'); 
     }
     
 }

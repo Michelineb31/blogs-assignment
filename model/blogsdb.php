@@ -50,11 +50,11 @@
          */
         function addBlogger()
         {
-            echo '<pre>';
-            
-            var_dump($_POST);
-            var_dump($_FILES['pic']['name']);
-            echo '</pre>';
+            //echo '<pre>';
+            //
+            //var_dump($_POST);
+            //var_dump($_FILES['pic']['name']);
+            //echo '</pre>';
             
             $insert = 'INSERT INTO bloggers(username, email, password, profile_image, bio)
             VALUES (:username, :email, :password, :profile_image, :bio)';
