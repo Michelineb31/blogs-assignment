@@ -140,6 +140,34 @@
             }
         }
         
+        /*
+         *This retrieves the userid of blogger based on username
+         *
+         *@param string $username the bloggers username
+         *@return $result the userid of the blogger
+         */
+        function getUser($username)
+        {
+            $pdo = getConnection();
+            
+            $select ='SELECT blogger_id
+                      FROM bloggers
+                      WHERE username=:username';
+
+            $statement = $pdo->prepare($select);
+            
+            $statement->bindValue(':username', $username, PDO::PARAM_STR);
+            
+            $statement->execute();
+            
+            $row = $statement->fetch(PDO::FETCH_ASSOC);
+           
+            $result = $row['blogger_id'];
+           
+            return $result;
+           
+        }
+        
         function allBloggers() {
             $select = 'SELECT username, profileImage, bio FROM bloggers';
             $results = $this->_pdo->query($select);

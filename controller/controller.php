@@ -13,13 +13,13 @@ class Controller
     public function homepage()
     {
         
-       // $data = new DataLayer();
+       $data = new BlogsDB();
        // $bloggers = $data->getAllBloggers();
        
        //saving the data to the router
        //$this->_f3->set('bloggers', $bloggers);
        
-       $this->_f3->set('navbar', 'view/navbar.php');
+       //$this->_f3->set('navbar', 'view/navbar.php');
     
        echo Template::instance()->render('view/home.php');   
     }
@@ -64,9 +64,15 @@ class Controller
     
     public function createBlogEntry()
     {
-        
         $data = new BlogsDB();
-        $createBlog = $data->addBlog();
+       
+        //$userId= $data->getUser($_SESSION['username']);
+
+        
+        $this->_f3->reroute('/myblogs');
+        
+        
+        $createBlog = $data->addBlog($username);
         
         $this->_f3->set('write', 'images/writing.png');
 
@@ -82,6 +88,8 @@ class Controller
         
         //echo Template::instance()->render('view/createablog.php'); 
     }
+    
+    
     
 }
 

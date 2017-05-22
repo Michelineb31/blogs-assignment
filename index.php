@@ -16,6 +16,7 @@
     
 	
 	$f3->set('header', 'view/header.php');
+	$f3->set('navbar', 'view/navbar.php');
 	
 
     // home.php
@@ -46,6 +47,12 @@
 	$f3->route('POST /addblog', function($f3) {
 		$controller = new Controller($f3);
 		$controller->createBlogEntry(); 
+	});
+	
+	//all my blog posts
+	$f3->route('GET / myblogs', function($f3) {
+		$controller = new Controller($f3);
+		//$controller->createBlogEntry(); 		
 	});
 	
 	

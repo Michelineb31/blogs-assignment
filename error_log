@@ -856,3 +856,32 @@ Stack trace:
 [21-May-2017 23:28:34 America/Chicago] [328/blogs-assignment/controller/controller.php:69] BlogsDB->addBlog()
 [21-May-2017 23:28:34 America/Chicago] [328/blogs-assignment/index.php:48] Controller->createBlogEntry()
 [21-May-2017 23:28:34 America/Chicago] [328/blogs-assignment/index.php:97] Base->run()
+[21-May-2017 23:30:39 America/Chicago] Missing argument 1 for BlogsDB::addBlog(), called in /home/mbourque/public_html/328/blogs-assignment/controller/controller.php on line 69 and defined
+[21-May-2017 23:30:39 America/Chicago] [328/blogs-assignment/model/blogsdb.php:172] Base->{closure}()
+[21-May-2017 23:30:39 America/Chicago] [328/blogs-assignment/controller/controller.php:69] BlogsDB->addBlog()
+[21-May-2017 23:30:39 America/Chicago] [328/blogs-assignment/index.php:48] Controller->createBlogEntry()
+[21-May-2017 23:30:39 America/Chicago] [328/blogs-assignment/index.php:97] Base->run()
+[21-May-2017 23:30:58 America/Chicago] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'field list' [/home/mbourque/public_html/328/blogs-assignment/model/blogsdb.php:181]
+[21-May-2017 23:30:58 America/Chicago] [328/blogs-assignment/model/blogsdb.php:181] PDOStatement->execute()
+[21-May-2017 23:30:58 America/Chicago] [328/blogs-assignment/controller/controller.php:69] BlogsDB->addBlog()
+[21-May-2017 23:30:58 America/Chicago] [328/blogs-assignment/index.php:48] Controller->createBlogEntry()
+[21-May-2017 23:30:58 America/Chicago] [328/blogs-assignment/index.php:97] Base->run()
+[21-May-2017 23:34:04 America/Chicago] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'field list' [/home/mbourque/public_html/328/blogs-assignment/model/blogsdb.php:181]
+[21-May-2017 23:34:04 America/Chicago] [328/blogs-assignment/model/blogsdb.php:181] PDOStatement->execute()
+[21-May-2017 23:34:04 America/Chicago] [328/blogs-assignment/controller/controller.php:69] BlogsDB->addBlog()
+[21-May-2017 23:34:04 America/Chicago] [328/blogs-assignment/index.php:48] Controller->createBlogEntry()
+[21-May-2017 23:34:04 America/Chicago] [328/blogs-assignment/index.php:97] Base->run()
+[22-May-2017 00:08:30 America/Chicago] PHP Parse error:  syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/mbourque/public_html/328/blogs-assignment/index.php on line 54
+[22-May-2017 00:09:20 America/Chicago] HTTP 404 (GET /myblogs)
+[22-May-2017 00:09:20 America/Chicago] [328/blogs-assignment/index.php:103] Base->run()
+[22-May-2017 00:14:42 America/Chicago] HTTP 404 (GET /myblogs)
+[22-May-2017 00:14:42 America/Chicago] [328/blogs-assignment/index.php:103] Base->run()
+[22-May-2017 00:14:46 America/Chicago] Unable to open 
+[22-May-2017 00:14:46 America/Chicago] [328/blogs-assignment/tmp/181sd005gmak9.c2ilrdsvm9k3.php:7] Preview->render()
+[22-May-2017 00:14:46 America/Chicago] [328/blogs-assignment/controller/controller.php:93] Preview->render()
+[22-May-2017 00:14:46 America/Chicago] [328/blogs-assignment/index.php:54] Controller->seeMyBlogs()
+[22-May-2017 00:14:46 America/Chicago] [328/blogs-assignment/index.php:103] Base->run()
+[22-May-2017 00:23:15 America/Chicago] HTTP 404 (GET /styles/bootstrap.css.map)
+[22-May-2017 00:23:15 America/Chicago] [328/blogs-assignment/index.php:103] Base->run()
+[22-May-2017 00:23:15 America/Chicago] HTTP 404 (GET /styles/bootstrap-theme.css.map)
+[22-May-2017 00:23:15 America/Chicago] [328/blogs-assignment/index.php:103] Base->run()
