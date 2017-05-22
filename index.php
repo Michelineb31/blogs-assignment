@@ -22,20 +22,33 @@
     $f3->route('GET /',function($f3) {
         $controller = new Controller($f3);
 		$controller->homepage();  
-    
     });
 	
 	//becomeblogger.php
 	$f3->route('GET /createbloggerpage', function($f3) {
 		$controller = new Controller($f3);
 		$controller->createBloggerPage();  
-
-        });
-	
+    });
+	//creating the blogger account
 	$f3->route('POST /submitcreateaccount', function($f3) {
 		$controller = new Controller($f3);
 		$controller->submitCreateAccount(); 
-		});
+	});
+	
+	//gets create a blog page
+	$f3->route('GET /createablog', function($f3) {
+		$controller = new Controller($f3);
+		$controller->blogEntry(); 
+	});
+	
+	//posting the blog entry
+	$f3->route('POST /addBlog', function($f3) {
+		$controller = new Controller($f3);
+		$controller->createBlogEntry(); 
+	});
+	
+	
+	
 	
 	
     /*
@@ -70,6 +83,14 @@
     //$f3->route('GET /blog/@username') need to finish this....not sure how to call certian blog unless add bog id to table
     
     */
+	
+	//set the images for the website
+	$f3->set('trumpet', 'images/trumpet.png');
+	$f3->set('userPic', 'images/user.png');
+	$f3->set('logo', 'images/blog_logo.png');
+	$f3->set('lock', 'images/lock.png');
+	$f3->set('write', 'images/writing.png');
+			 
     
     //Run fat free
     $f3->run();

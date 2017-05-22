@@ -3,14 +3,14 @@
       <div class="row">
          <div class="col-sm-8">
             <div class="jumbotron">
-               <img src="{{ @write }}" alt="writing.png" id="writing">
+               <img src="<?= $write ?>" alt="writing.png" id="writing">
                <h1>Hello </h1>
                <p>what's on your mind?</p>
             </div>
                
             <div class="jumbotron">
                <div class="container">
-                  <form action="{{@BASE}}/addBlog" method="post">
+                  <form action="<?= $BASE ?>/addBlog" method="post">
                      <div class="form-group">
                       <label class="control-label col-sm-12">Title</label>
                         <div class="col-sm-12">

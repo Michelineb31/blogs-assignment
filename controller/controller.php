@@ -36,20 +36,49 @@ class Controller
         $createBlogger = $data->addBlogger();
         $addProfileImage = $data->uploadProfileImage();
         
-        //echo '<pre>';
-        //var_dump($createBlogger);
+       // echo '<pre>';
+       // var_dump($addProfileImage);
         //echo'</pre>';
         
-        if($addProfileImage){
-            $_SESSION['username'] = $_POST['username'];
-            $SESSION['loggedIn'] = true;
+        //f($addProfileImage != null){
+        //    $_SESSION['username'] = $_POST['username'];
+        //   $_SESSION['loggedIn'] = true;
             
             //redirect
-            $this->_f3reroute('/blogEntry');
-        } else {
-            $this->_f3->reroute('/createbloggerpage');
-        }   
+            $this->_f3->reroute('/createablog');
+        //} else {
+           // $this->_f3->reroute('/createbloggerpage');
+        //}   
     }
+    
+    public function blogEntry()
+    {
+        echo Template::instance()->render('view/createablog.php'); 
+    }
+    
+    public function createBlogEntry()
+    {
+        
+        $data = new BlogsDB();
+        $createBlog = $data->addBlog();
+        
+        $this->_f3->set('write', 'images/writing.png');
+        
+        echo Template::instance()->render('view/createablog.php');
+    }
+    
+    public function submitBlogEntry()
+    {
+        $data = new BlogsDB();
+        $createBlogEntry = $data->addBlog();
+        var_dump($creatBlogEntry);
+        
+        //echo Template::instance()->render('view/createablog.php');
+        
+    
+        
+    }
+    
 }
 
 ?>
