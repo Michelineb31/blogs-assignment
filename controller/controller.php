@@ -13,7 +13,7 @@ class Controller
     public function homepage()
     {
         
-       $data = new BlogsDB();
+       //$data = new BlogsDB();
        // $bloggers = $data->getAllBloggers();
        
        //saving the data to the router
@@ -21,7 +21,7 @@ class Controller
        
        //$this->_f3->set('navbar', 'view/navbar.php');
     
-       echo Template::instance()->render('view/home.php');   
+       //echo Template::instance()->render('view/home.php');   
     }
     
     public function createBloggerPage()
@@ -87,10 +87,7 @@ class Controller
         
         
         //echo Template::instance()->render('view/createablog.php'); 
-    }
-    
-    
-    
+    } 
 }
 
 ?>
