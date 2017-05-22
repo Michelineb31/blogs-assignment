@@ -815,3 +815,44 @@ Stack trace:
 [21-May-2017 23:06:38 America/Chicago] [328/blogs-assignment/controller/controller.php:69] BlogsDB->addBlog()
 [21-May-2017 23:06:38 America/Chicago] [328/blogs-assignment/index.php:48] Controller->createBlogEntry()
 [21-May-2017 23:06:38 America/Chicago] [328/blogs-assignment/index.php:97] Base->run()
+[21-May-2017 23:11:27 America/Chicago] HTTP 404 (GET /styles/bootstrap.css.map)
+[21-May-2017 23:11:27 America/Chicago] [328/blogs-assignment/index.php:97] Base->run()
+[21-May-2017 23:11:27 America/Chicago] HTTP 404 (GET /styles/bootstrap-theme.css.map)
+[21-May-2017 23:11:27 America/Chicago] [328/blogs-assignment/index.php:97] Base->run()
+[21-May-2017 23:12:01 America/Chicago] Missing argument 1 for BlogsDB::addBlog(), called in /home/mbourque/public_html/328/blogs-assignment/controller/controller.php on line 69 and defined
+[21-May-2017 23:12:01 America/Chicago] [328/blogs-assignment/model/blogsdb.php:172] Base->{closure}()
+[21-May-2017 23:12:01 America/Chicago] [328/blogs-assignment/controller/controller.php:69] BlogsDB->addBlog()
+[21-May-2017 23:12:01 America/Chicago] [328/blogs-assignment/index.php:48] Controller->createBlogEntry()
+[21-May-2017 23:12:01 America/Chicago] [328/blogs-assignment/index.php:97] Base->run()
+[21-May-2017 23:14:24 America/Chicago] Missing argument 1 for BlogsDB::addBlog(), called in /home/mbourque/public_html/328/blogs-assignment/controller/controller.php on line 69 and defined
+[21-May-2017 23:14:24 America/Chicago] [328/blogs-assignment/model/blogsdb.php:172] Base->{closure}()
+[21-May-2017 23:14:24 America/Chicago] [328/blogs-assignment/controller/controller.php:69] BlogsDB->addBlog()
+[21-May-2017 23:14:24 America/Chicago] [328/blogs-assignment/index.php:48] Controller->createBlogEntry()
+[21-May-2017 23:14:24 America/Chicago] [328/blogs-assignment/index.php:97] Base->run()
+[21-May-2017 23:15:40 America/Chicago] Missing argument 1 for BlogsDB::addBlog(), called in /home/mbourque/public_html/328/blogs-assignment/controller/controller.php on line 69 and defined
+[21-May-2017 23:15:40 America/Chicago] [328/blogs-assignment/model/blogsdb.php:172] Base->{closure}()
+[21-May-2017 23:15:40 America/Chicago] [328/blogs-assignment/controller/controller.php:69] BlogsDB->addBlog()
+[21-May-2017 23:15:40 America/Chicago] [328/blogs-assignment/index.php:48] Controller->createBlogEntry()
+[21-May-2017 23:15:40 America/Chicago] [328/blogs-assignment/index.php:97] Base->run()
+[21-May-2017 23:26:48 America/Chicago] Missing argument 1 for BlogsDB::addBlog(), called in /home/mbourque/public_html/328/blogs-assignment/controller/controller.php on line 69 and defined
+[21-May-2017 23:26:48 America/Chicago] [328/blogs-assignment/model/blogsdb.php:172] Base->{closure}()
+[21-May-2017 23:26:48 America/Chicago] [328/blogs-assignment/controller/controller.php:69] BlogsDB->addBlog()
+[21-May-2017 23:26:48 America/Chicago] [328/blogs-assignment/index.php:48] Controller->createBlogEntry()
+[21-May-2017 23:26:48 America/Chicago] [328/blogs-assignment/index.php:97] Base->run()
+[21-May-2017 23:26:54 America/Chicago] Unable to open view/home.php
+[21-May-2017 23:26:54 America/Chicago] [328/blogs-assignment/controller/controller.php:24] Preview->render()
+[21-May-2017 23:26:54 America/Chicago] [328/blogs-assignment/index.php:24] Controller->homepage()
+[21-May-2017 23:26:54 America/Chicago] [328/blogs-assignment/index.php:97] Base->run()
+[21-May-2017 23:27:01 America/Chicago] Unable to open view/home.php
+[21-May-2017 23:27:01 America/Chicago] [328/blogs-assignment/controller/controller.php:24] Preview->render()
+[21-May-2017 23:27:01 America/Chicago] [328/blogs-assignment/index.php:24] Controller->homepage()
+[21-May-2017 23:27:01 America/Chicago] [328/blogs-assignment/index.php:97] Base->run()
+[21-May-2017 23:27:14 America/Chicago] Unable to open view/home.php
+[21-May-2017 23:27:14 America/Chicago] [328/blogs-assignment/controller/controller.php:24] Preview->render()
+[21-May-2017 23:27:14 America/Chicago] [328/blogs-assignment/index.php:24] Controller->homepage()
+[21-May-2017 23:27:14 America/Chicago] [328/blogs-assignment/index.php:97] Base->run()
+[21-May-2017 23:28:34 America/Chicago] Missing argument 1 for BlogsDB::addBlog(), called in /home/mbourque/public_html/328/blogs-assignment/controller/controller.php on line 69 and defined
+[21-May-2017 23:28:34 America/Chicago] [328/blogs-assignment/model/blogsdb.php:172] Base->{closure}()
+[21-May-2017 23:28:34 America/Chicago] [328/blogs-assignment/controller/controller.php:69] BlogsDB->addBlog()
+[21-May-2017 23:28:34 America/Chicago] [328/blogs-assignment/index.php:48] Controller->createBlogEntry()
+[21-May-2017 23:28:34 America/Chicago] [328/blogs-assignment/index.php:97] Base->run()

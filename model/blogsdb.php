@@ -177,8 +177,6 @@
             $statement->bindValue(':username', $_POST['username'], PDO::PARAM_STR);
             $statement->bindValue(':title', $_POST['entry'], PDO::PARAM_STR);
             $statement->bindValue(':entry', $_POST['entry'], PDO::PARAM_STR);
-  
-            
             
             $statement->execute();
         }

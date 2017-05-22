@@ -69,15 +69,15 @@ class Controller
         $createBlog = $data->addBlog();
         
         $this->_f3->set('write', 'images/writing.png');
-        echo 'Hello';
+
         
-        ///echo Template::instance()->render('view/createablog.php');
+        echo Template::instance()->render('view/createablog.php');
     }
     
     public function submitBlogEntry()
     {
         $data = new BlogsDB();
-        $createBlogEntry = $data->addBlog();
+        $createBlogEntry = $data->addBlog($username);
         
         
         //echo Template::instance()->render('view/createablog.php'); 

@@ -43,7 +43,7 @@
 	});
 	
 	//posting the blog entry
-	$f3->route('POST /addBlog', function($f3) {
+	$f3->route('POST /addblog', function($f3) {
 		$controller = new Controller($f3);
 		$controller->createBlogEntry(); 
 	});
