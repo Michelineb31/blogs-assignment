@@ -50,6 +50,7 @@
 	});
 	
 	//all my blog posts
+	/*
 	$f3->route('GET / myblogs', function($f3) {
 		$controller = new Controller($f3);
 		//$controller->createBlogEntry(); 		

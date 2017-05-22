@@ -19,9 +19,9 @@ class Controller
        //saving the data to the router
        //$this->_f3->set('bloggers', $bloggers);
        
-       //$this->_f3->set('navbar', 'view/navbar.php');
+       $this->_f3->set('navbar', 'view/navbar.php');
     
-       //echo Template::instance()->render('view/home.php');   
+       echo Template::instance()->render('view/home.php');   
     }
     
     public function createBloggerPage()
@@ -87,7 +87,9 @@ class Controller
         
         
         //echo Template::instance()->render('view/createablog.php'); 
-    } 
+    }
+    
+    //make dunction to show all blogs
 }
 
 ?>
