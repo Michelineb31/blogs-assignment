@@ -41,15 +41,15 @@ class Controller
         //var_dump('test here' .$_SESSION['username']);
         //echo'</pre>';
         
-        if($addProfileImage){
+        //if($addProfileImage){
            $_SESSION['username'] = $_POST['username'];
            $_SESSION['loggedIn'] = true;
             
             //redirect
             $this->_f3->reroute('/createablog');
-        } else {
-          $this->_f3->reroute('/createbloggerpage');
-        }   
+      //  } else {
+      //    $this->_f3->reroute('/createbloggerpage');
+       // }   
     }
     
     public function blogEntry()
@@ -69,8 +69,9 @@ class Controller
         $createBlog = $data->addBlog();
         
         $this->_f3->set('write', 'images/writing.png');
+        echo 'Hello';
         
-        echo Template::instance()->render('view/createablog.php');
+        ///echo Template::instance()->render('view/createablog.php');
     }
     
     public function submitBlogEntry()

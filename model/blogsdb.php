@@ -78,7 +78,7 @@
         //and stores it into images folder
         function uploadProfileImage()
         {
-            $errors = array();//check to insurance file is actually an image file
+            $errors = array();//check to insure file is actually an image file
             $targer_directory ="images/";
             $target_file =$target_directory . basename($_FILES['pic']['name']);
             $uploadOK = 1;
@@ -90,7 +90,7 @@
                 $check = getimagesize($_FILES['pic']['tmp_name']);
                 
                 if($check != false){
-                    echo "File is an image - " . check["mime"] . ".";
+                    //echo "File is an image - " . check["mime"] . ".";
                     $uploadOK = 1;
                 } else{
                     $errors[] = "File us not an image";

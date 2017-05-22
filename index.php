@@ -6,7 +6,7 @@
 	
 
     
-    //session_start();
+    session_start();
 
     //Create an instance of the Base class
     //$f3 = Base::instance();
@@ -29,6 +29,7 @@
 		$controller = new Controller($f3);
 		$controller->createBloggerPage();  
     });
+	
 	//creating the blogger account
 	$f3->route('POST /submitcreateaccount', function($f3) {
 		$controller = new Controller($f3);
