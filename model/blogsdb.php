@@ -195,7 +195,7 @@
         
         
         function addBlog($username) {
-            var_dump($username);
+            //var_dump($username);
             $insert = 'INSERT INTO blogposts (username, title, entry) VALUES (:username, :title, :entry)';
             
             $statement = $this->_pdo->prepare($insert);
