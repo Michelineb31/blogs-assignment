@@ -1,4 +1,4 @@
-<include href="{{ @header }}" />
+<?php echo $this->render($header,NULL,get_defined_vars(),0); ?>
      
     <body>
         <div class="container">
@@ -11,7 +11,7 @@
                     
                     
                      <div class="jumbotron">
-                            <img src="{{ @logo }}" alt="blog_logo.png">
+                            <img src="<?= $logo ?>" alt="blog_logo.png">
                             <h1>The Blog Site!</h1>
                             <p>Your one-stop shop for internet blogs</p>
                         </div>

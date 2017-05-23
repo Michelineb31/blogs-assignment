@@ -5,12 +5,12 @@ class Controller
     private $_f3;
     
     
-    public function __construct($f3)
+    function __construct($f3)
     {
         $this->_f3 = $f3;
     }
     
-    public function homepage()
+    function homepage()
     {
         
        //$data = new BlogsDB();
@@ -24,12 +24,12 @@ class Controller
        echo Template::instance()->render('view/home.php');   
     }
     
-    public function createBloggerPage()
+    function createBloggerPage()
     {
        echo Template::instance()->render('view/becomeblogger.php'); 
     }
     
-    public function submitCreateAccount()
+    function submitCreateAccount()
     {
         
         $data = new BlogsDB();
@@ -52,7 +52,7 @@ class Controller
        // }   
     }
     
-    public function blogEntry()
+    function blogEntry()
     {
         $this->_f3->set('username', $_SESSION['username']);
         echo '<pre>';
@@ -62,7 +62,7 @@ class Controller
         echo Template::instance()->render('view/createablog.php'); 
     }
     
-    public function createBlogEntry()
+    function createBlogEntry()
     {
         $data = new BlogsDB();
        
@@ -80,7 +80,7 @@ class Controller
         echo Template::instance()->render('view/createablog.php');
     }
     
-    public function submitBlogEntry()
+    function submitBlogEntry()
     {
         $data = new BlogsDB();
         $createBlogEntry = $data->addBlog($username);
@@ -91,11 +91,20 @@ class Controller
     
     //make function to show all blogs
     
-    /*displays the login page
+    /*
+     *displays the login page
      */
-    public function loginPage()
+    function loginPage()
     {
          echo Template::instance()->render('view/login.php');
+    }
+    
+    /*
+     *displays the about us page
+     */
+    function aboutUs()
+    {
+        echo Template::instance()->render('view/aboutus.php');
     }
 }
 

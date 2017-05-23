@@ -64,22 +64,16 @@
 		$controller->loginPage();
     });
 	
-	
-	
-	
-	
-    /*
     
-    $f3->route('GET /aboutus', function() {
-
-        echo Template::instance()->render('pages/aboutus.html');
+    //display the about us page
+    $f3->route('GET /aboutus', function($f3) {
+		$controller = new Controller($f3);
+		$controller->aboutUs();
         });
-        */
+        
     
     
 	/*
-    
-
     
     $f3->route('GET /createblog', function() {
 
