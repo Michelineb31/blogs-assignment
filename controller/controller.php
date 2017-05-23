@@ -32,6 +32,7 @@ class Controller
      */
     function createBloggerPage()
     {
+       $this->_f3->set('navbar', 'view/navbar.php');
        echo Template::instance()->render('view/becomeblogger.php'); 
     }
     
