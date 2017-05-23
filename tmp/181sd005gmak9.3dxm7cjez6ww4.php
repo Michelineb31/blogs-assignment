@@ -1,10 +1,9 @@
-<?php echo $this->render($header,NULL,get_defined_vars(),0); ?>
-     
+<?php echo $this->render($header,NULL,get_defined_vars(),0); ?> 
     <body>
         <div class="container">
             <div class="row">
-                <div class="col-sm-2" id="sidebar">
-                      
+                <div class="col-sm-2">
+                 <?php echo $this->render($navbar,NULL,get_defined_vars(),0); ?>     
                 </div>
                 
                 <div class="col-sm-8">

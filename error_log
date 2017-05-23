@@ -1093,3 +1093,6 @@ Stack trace:
 [23-May-2017 01:51:16 America/Chicago] [328/blogs-assignment/vendor/bcosca/fatfree-core/base.php:1791] {closure}()
 [23-May-2017 01:51:16 America/Chicago] [328/blogs-assignment/vendor/bcosca/fatfree-core/base.php:1612] Base->call()
 [23-May-2017 01:51:16 America/Chicago] [328/blogs-assignment/index.php:114] Base->run()
+[23-May-2017 02:20:06 America/Chicago] HTTP 404 (POST /loggedIn)
+[23-May-2017 02:20:06 America/Chicago] [328/blogs-assignment/vendor/bcosca/fatfree-core/base.php:1645] Base->error()
+[23-May-2017 02:20:06 America/Chicago] [328/blogs-assignment/index.php:108] Base->run()
