@@ -13,6 +13,8 @@
 
     //Instantiate the database class
     $blogsDB = new BlogsDB();
+	
+	$f3->set('DEBUG',3);
     
 	
 	$f3->set('header', 'view/header.php');

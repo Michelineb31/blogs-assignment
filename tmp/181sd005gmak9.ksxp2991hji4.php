@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-2" id="sidebar">
-         <?php echo $this->render($navBar,NULL,get_defined_vars(),0); ?>
+
       </div>
       <div class="col-sm-8">
         <div class="jumbotron">

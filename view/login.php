@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-2" id="sidebar">
-         <include href ="{{ @navBar }}"/>
+
       </div>
       <div class="col-sm-8">
         <div class="jumbotron">
