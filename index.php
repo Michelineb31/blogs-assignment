@@ -54,7 +54,13 @@
 	$f3->route('GET / myblogs', function($f3) {
 		$controller = new Controller($f3);
 		//$controller->createBlogEntry(); 		
-	});
+	});*/
+	
+	//display page to log in
+	$f3->route('GET /login', function($f3) {
+		$controller = new Controller($f3);
+		$controller->loginPage();
+    });
 	
 	
 	
@@ -71,10 +77,7 @@
     
 	/*
     
-    $f3->route('GET /login', function() {
-;
-        echo Template::instance()->render('pages/login.html');
-        });
+
     
     $f3->route('GET /createblog', function() {
 

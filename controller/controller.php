@@ -89,7 +89,14 @@ class Controller
         //echo Template::instance()->render('view/createablog.php'); 
     }
     
-    //make dunction to show all blogs
+    //make function to show all blogs
+    
+    /*displays the login page
+     */
+    public function loginPage()
+    {
+         echo Template::instance()->render('view/login.php');
+    }
 }
 
 ?>

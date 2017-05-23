@@ -129,7 +129,7 @@
             }
         }
         
-        public function errors(){
+        function errors(){
             if(sizeof($errors) > 0){
                 echo '<div class="alert alert-danger">
                 <strong> Uploading error</strong>';

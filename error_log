@@ -895,3 +895,31 @@ Stack trace:
 [22-May-2017 00:59:18 America/Chicago] [328/blogs-assignment/index.php:105] Base->run()
 [22-May-2017 01:02:15 America/Chicago] HTTP 404 (GET /myblogs)
 [22-May-2017 01:02:15 America/Chicago] [328/blogs-assignment/index.php:105] Base->run()
+[22-May-2017 18:42:31 America/Chicago] HTTP 404 (GET /aboutus)
+[22-May-2017 18:42:31 America/Chicago] [328/blogs-assignment/index.php:105] Base->run()
+[22-May-2017 18:42:33 America/Chicago] HTTP 404 (GET /login)
+[22-May-2017 18:42:33 America/Chicago] [328/blogs-assignment/index.php:105] Base->run()
+[22-May-2017 18:43:18 America/Chicago] HTTP 404 (GET /login)
+[22-May-2017 18:43:18 America/Chicago] [328/blogs-assignment/index.php:105] Base->run()
+[22-May-2017 21:25:05 America/Chicago] HTTP 404 (GET /login)
+[22-May-2017 21:25:05 America/Chicago] [328/blogs-assignment/index.php:105] Base->run()
+[22-May-2017 21:28:38 America/Chicago] PHP Parse error:  syntax error, unexpected '$f3' (T_VARIABLE), expecting '(' in /home/mbourque/public_html/328/blogs-assignment/index.php on line 59
+[22-May-2017 21:29:21 America/Chicago] Unable to open view/login.html
+[22-May-2017 21:29:21 America/Chicago] [328/blogs-assignment/controller/controller.php:96] Preview->render()
+[22-May-2017 21:29:21 America/Chicago] [328/blogs-assignment/index.php:61] Controller->login()
+[22-May-2017 21:29:21 America/Chicago] [328/blogs-assignment/index.php:107] Base->run()
+[22-May-2017 21:29:40 America/Chicago] Unable to open 
+[22-May-2017 21:29:40 America/Chicago] [328/blogs-assignment/tmp/181sd005gmak9.ksxp2991hji4.php:6] Preview->render()
+[22-May-2017 21:29:40 America/Chicago] [328/blogs-assignment/controller/controller.php:96] Preview->render()
+[22-May-2017 21:29:40 America/Chicago] [328/blogs-assignment/index.php:61] Controller->login()
+[22-May-2017 21:29:40 America/Chicago] [328/blogs-assignment/index.php:107] Base->run()
+[22-May-2017 21:39:05 America/Chicago] Unable to open 
+[22-May-2017 21:39:05 America/Chicago] [328/blogs-assignment/tmp/181sd005gmak9.ksxp2991hji4.php:6] Preview->render()
+[22-May-2017 21:39:05 America/Chicago] [328/blogs-assignment/controller/controller.php:98] Preview->render()
+[22-May-2017 21:39:05 America/Chicago] [328/blogs-assignment/index.php:62] Controller->loginPage()
+[22-May-2017 21:39:05 America/Chicago] [328/blogs-assignment/index.php:108] Base->run()
+[22-May-2017 21:39:12 America/Chicago] Unable to open 
+[22-May-2017 21:39:12 America/Chicago] [328/blogs-assignment/tmp/181sd005gmak9.ksxp2991hji4.php:6] Preview->render()
+[22-May-2017 21:39:12 America/Chicago] [328/blogs-assignment/controller/controller.php:98] Preview->render()
+[22-May-2017 21:39:12 America/Chicago] [328/blogs-assignment/index.php:62] Controller->loginPage()
+[22-May-2017 21:39:12 America/Chicago] [328/blogs-assignment/index.php:108] Base->run()
