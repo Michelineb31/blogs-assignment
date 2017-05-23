@@ -10,9 +10,12 @@ class Controller
         $this->_f3 = $f3;
     }
     
+    /*
+     *Displays the homepage
+     *that lists all bloggers
+     */
     function homepage()
     {
-        
        //$data = new BlogsDB();
        // $bloggers = $data->getAllBloggers();
        
@@ -80,20 +83,19 @@ class Controller
     {
         $data = new BlogsDB();
        
-        //$userId= $data->getUser($_SESSION['username']);
-
-        
         $this->_f3->reroute('/myblogs');
-        
         
         $createBlog = $data->addBlog($username);
         
         $this->_f3->set('write', 'images/writing.png');
-
         
         echo Template::instance()->render('view/createablog.php');
     }
     
+    /*
+     *Displays create a blog page
+     *and submits the entry
+     */
     function submitBlogEntry()
     {
         $data = new BlogsDB();
@@ -115,7 +117,9 @@ class Controller
      */
     function loginPage()
     {
-         echo Template::instance()->render('view/login.php');
+        $this->_f3->set('navbar', 'view/navbar.php');
+        
+        echo Template::instance()->render('view/login.php');
     }
     
     /*
@@ -123,12 +127,14 @@ class Controller
      */
     function aboutUs()
     {
+        $this->_f3->set('navbar', 'view/navbar.php');
+        
         echo Template::instance()->render('view/aboutus.php');
     }
     
     function allMyBlogs()
     {
-        $this->_f3->set('navbar', 'view/navbar.php');
+        $this->_f3->set('navbar', 'view/userbar.php');
         
         echo Template::instance()->render('view/myblogs.php');
     }

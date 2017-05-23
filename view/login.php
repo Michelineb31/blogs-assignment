@@ -3,13 +3,13 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-2" id="sidebar">
-
+         <include href="{{ @navbar }}" />
       </div>
       <div class="col-sm-8">
         <div class="jumbotron">
           <img src="{{ @lock }}" alt="lock.png" id="lock">
             <h1>Welcome back!</h1>
-        </div>     
+        </div>
         <div class="jumbotron">
           <div class="container">
             <form action="{{ @BASE }}/loggedIn" method="POST">

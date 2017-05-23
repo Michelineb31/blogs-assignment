@@ -1,10 +1,9 @@
-<include href="{{ @header }}" />
-     
+<include href="{{ @header }}" /> 
     <body>
         <div class="container">
             <div class="row">
-                <div class="col-sm-2" id="sidebar">
-                      
+                <div class="col-sm-2">
+                 <include href="{{ @navbar }}" />     
                 </div>
                 
                 <div class="col-sm-8">
