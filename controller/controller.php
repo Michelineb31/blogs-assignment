@@ -128,6 +128,8 @@ class Controller
     
     function allMyBlogs()
     {
+        $this->_f3->set('navbar', 'view/navbar.php');
+        
         echo Template::instance()->render('view/myblogs.php');
     }
 }
