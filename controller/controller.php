@@ -68,7 +68,7 @@ class Controller
         //echo '<pre>';
         //    var_dump('test session' . $_SESSION['username']);
         //echo'</pre>';
-        
+        $this->_f3->set('navbar', 'view/usernav.php');
         echo Template::instance()->render('view/createablog.php'); 
     }
     

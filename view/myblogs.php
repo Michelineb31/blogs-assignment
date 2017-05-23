@@ -16,13 +16,13 @@
       <div class="jumbotron">
         <div class="container">
           <div class="row">
-            <div class="col-sm-7" id="blogback">
+            <div class="col-sm-7">
               <table class="table table-striped">
                 <thead><th>Blog</th><th>Update</th><th>Delete</th></thead>
                   <tbody>
                     <repeat group="{{ @blogs }}" value="{{ @blog }}">
                       <tr>
-                        <td>{{ ucFirst(@blog['title']) }}</td>
+                        <td>{{ @blog['title'] }}</td>
                           <td><a href="{{ @BASE }}/updateBlog/{{ @blog.blogID }}" type="button"
                                 class="btn btn-default btn-sm">
                               <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
