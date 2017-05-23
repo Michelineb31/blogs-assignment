@@ -3,7 +3,7 @@
 <!--
 Author: Micheline Bourque
 Date: 05/21/17
-Navigation bar for Micheline's Dating Website
+Header for Blogs Assignment
 -->
 <head>
     <!--Author: Micheline Bourque

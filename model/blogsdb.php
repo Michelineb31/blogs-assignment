@@ -46,7 +46,6 @@
          *@param takes a blogger object and adds it to
          *the database
          *
-         *@return the id of the last inserted row
          */
         function addBlogger()
         {
@@ -68,9 +67,7 @@
             $statement->bindValue(':bio', $_POST['biography'], PDO::PARAM_STR);
             
             $statement->execute();
-            
-            //Return ID of inserted row
-            //return $this->_pdo->lastInsertId();
+
         
         }
         
@@ -79,7 +76,7 @@
         function uploadProfileImage()
         {
             $errors = array();//check to insure file is actually an image file
-            $targer_directory ="images/";
+            $target_directory ="images/";
             $target_file =$target_directory . basename($_FILES['pic']['name']);
             $uploadOK = 1;
             $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
@@ -169,7 +166,7 @@
         }
         
         function allBloggers() {
-            $select = 'SELECT username, profileImage, bio FROM bloggers';
+            $select = 'SELECT username, profile_image, bio FROM bloggers';
             $results = $this->_pdo->query($select);
             
             $resultsArray = array();

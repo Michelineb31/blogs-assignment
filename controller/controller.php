@@ -90,9 +90,14 @@ class Controller
     }
     
     //make function to show all blogs
+    /*
+     *Displays all of a bloggers blogs
+     */
+
+    
     
     /*
-     *displays the login page
+     *Displays the login page
      */
     function loginPage()
     {
@@ -100,7 +105,7 @@ class Controller
     }
     
     /*
-     *displays the about us page
+     *Displays the about us page
      */
     function aboutUs()
     {

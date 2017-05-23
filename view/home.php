@@ -1,22 +1,12 @@
- <include href="{{ @header }}"/>
- <body>
+<include href="{{ @header }}" />
+<include href="{{ @navbar }}" />
+<body>
   <div class="container">
-   <div class="col-sm-2" id="navbar">
-    <p>hello</p>
-    <include href ="{{ @navbar }}"/>
-    </div>
-   <div class="col-sm-8">
-   
-     <div class="col-sm-3 text-center" id="profle">
-      <div class="row">
-      
-       
-      </div>
-      
-     </div>
+    <div class="col-sm-2">
      
-   
-   </div>
-   
+    </div>
+    <div class="col-sm-8">
+       
+    </div>
   </div>
- </body>
+</body>
