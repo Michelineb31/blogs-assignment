@@ -24,11 +24,18 @@ class Controller
        echo Template::instance()->render('view/home.php');   
     }
     
+    /*
+     *Displays page to become a blogger
+     */
     function createBloggerPage()
     {
        echo Template::instance()->render('view/becomeblogger.php'); 
     }
     
+    /*
+     *Allows a blogger to create an account and
+     *sumits the information they entered
+     */
     function submitCreateAccount()
     {
         
@@ -52,16 +59,23 @@ class Controller
        // }   
     }
     
+    /*
+     *Displays the page to create a blog
+     */
     function blogEntry()
     {
         $this->_f3->set('username', $_SESSION['username']);
-        echo '<pre>';
-            var_dump('test session' . $_SESSION['username']);
-        echo'</pre>';
+        //echo '<pre>';
+        //    var_dump('test session' . $_SESSION['username']);
+        //echo'</pre>';
         
         echo Template::instance()->render('view/createablog.php'); 
     }
     
+    /*
+     *Takes input from creating the blog entry
+     *and posts to DB
+     */
     function createBlogEntry()
     {
         $data = new BlogsDB();
@@ -110,6 +124,11 @@ class Controller
     function aboutUs()
     {
         echo Template::instance()->render('view/aboutus.php');
+    }
+    
+    function allMyBlogs()
+    {
+        echo Template::instance()->render('view/myblogs.php');
     }
 }
 

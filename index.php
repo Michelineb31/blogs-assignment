@@ -52,10 +52,10 @@
 	});
 	
 	//all my blog posts
-	//$f3->route('GET / myblogs', function($f3) {
-		//$controller = new Controller($f3);
-		//$controller->allMyBlogs(); 		
-	//});
+	$f3->route('GET /myblogs', function($f3) {
+		$controller = new Controller($f3);
+		$controller->allMyBlogs(); 		
+	});
 	
 	//display page to log in
 	$f3->route('GET /login', function($f3) {
@@ -68,7 +68,7 @@
     $f3->route('GET /aboutus', function($f3) {
 		$controller = new Controller($f3);
 		$controller->aboutUs();
-        });
+    });
         
     
     
