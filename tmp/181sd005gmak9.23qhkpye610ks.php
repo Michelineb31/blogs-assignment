@@ -10,7 +10,7 @@
       <div class="col-sm-8">
        
         <div class="jumbotron">
-          <img src="<?= $write ?>" alt="writing.png">
+          <img src="<?= $write ?>" alt="writing">
           <h1>Become a Blogger!</h1>
           <p>Create a new account below</p>
         </div>

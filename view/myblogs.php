@@ -1,4 +1,5 @@
 <include href="{{ @header }}" />
+<include href="{{ @navbar }}" />
     
 <body>
 <div class="container">

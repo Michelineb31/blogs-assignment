@@ -12,7 +12,7 @@
                
             <div class="jumbotron">
                <div class="container">
-                  <form action="{{@BASE}}/addBlog" method="post">
+                  <form action="{{@BASE}}/addblog" method="post">
                      <div class="form-group">
                       <label class="control-label col-sm-12">Title</label>
                         <div class="col-sm-12">

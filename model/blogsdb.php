@@ -1,6 +1,4 @@
 <?php
-
-
     /*
      *This file provides access to the bloggers
      *in the database.
@@ -66,11 +64,14 @@
             $statement->bindValue(':profile_image', 'images/'.$_FILES['pic']['name'], PDO::PARAM_STR); 
             $statement->bindValue(':bio', $_POST['biography'], PDO::PARAM_STR);
             
-            $statement->execute();
-
-        
+            $statement->execute(); 
         }
         
+        /*
+         *This method accepts and image file
+         *from what the user posts and then stores it
+         *into the images folder
+         */
         //this accepts an image file from the users post
         //and stores it into images folder
         function uploadProfileImage()
@@ -126,29 +127,15 @@
             }
         }
         
-        function errors(){
-            if(sizeof($errors) > 0){
-                echo '<div class="alert alert-danger">
-                <strong> Uploading error</strong>';
-                foreach($errors as $error){
-                    echo"$error";
-                }
-                echo '</div></div>';
-            }
-        }
-        
         /*
          *This retrieves the userid of blogger based on username
          *
          *@param string $username the bloggers username
-         *@return $result the userid of the blogger
+         *@return $result the blogger id of the blogger
          */
         function getUser($username)
         {
-            $pdo = getConnection();
-            
-            $select ='SELECT blogger_id
-                      FROM bloggers
+            $select ='SELECT blogger_id FROM bloggers
                       WHERE username=:username';
 
             $statement = $pdo->prepare($select);
@@ -161,10 +148,13 @@
            
             $result = $row['blogger_id'];
            
-            return $result;
-           
+            return $result;  
         }
         
+        /*
+         *Function to pull data from the
+         *bloggers database
+         */
         function allBloggers() {
             $select = 'SELECT username, profile_image, bio FROM bloggers';
             $results = $this->_pdo->query($select);
@@ -180,6 +170,10 @@
             
         }
         
+        /*
+         *This method gets data from
+         *the blog posts database
+         */
         function userBlogs($username) {
             $select = 'SELECT username, title, entry, date FROM blogposts WHERE username = $username ORDER BY date';
             $results = $this->_pdo->query($select);
@@ -193,7 +187,12 @@
             return $resultsArray;
         }
         
-        
+        /*
+         *This method adds a title, entry and
+         *username to the blogposts database
+         *
+         *@param username for the blogger
+         */
         function addBlog($username) {
             //var_dump($username);
             $insert = 'INSERT INTO blogposts (username, title, entry) VALUES (:username, :title, :entry)';
@@ -205,8 +204,6 @@
             
             $statement->execute();
         }
-        
-        
         
         /**
          *This function is going to

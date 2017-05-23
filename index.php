@@ -1,11 +1,22 @@
 <?php
+    /*
+     *This file provides the routes
+     *for the website.
+     *
+     *Blogs Assignment
+     *05/21/17
+     *
+     * PHP Version 5
+     *
+     * @author Micheline Bourque <mbourque@mail.greenriver.edu>
+     * @version 1.0
+     */
 
     //Require the autoload file
     require_once('vendor/autoload.php');
 	$f3 = require_once('vendor/bcosca/fatfree-core/base.php');
 	
 
-    
     session_start();
 
     //Create an instance of the Base class
@@ -73,12 +84,6 @@
     
     
 	/*
-    
-    $f3->route('GET /createblog', function() {
-
-        echo Template::instance()->render('pages/createblog.html');
-        });
-    
     $f3->route('GET /profile/@username, function($f3, $params') {
         //$f3->set('blogger', $GLOBALS['blogsDB']->getUsername($params['username']));
 		
@@ -87,7 +92,7 @@
 		echo Template::instance()->render('pages/profile.html');   
     }
     
-    //$f3->route('GET /blog/@username') need to finish this....not sure how to call certian blog unless add bog id to table
+    //$f3->route('GET /blog/@username') need to finish this..
     
     */
 	
