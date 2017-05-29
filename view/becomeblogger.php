@@ -37,11 +37,11 @@
                         <input type="password" class="form-control" name="password" id="password" required="true">
                       </div>
                     </div>
-                  <!-- Password verify                   -->
+                  <!-- Password verification -->
                     <div class="form-group required">
                       <label class="control-label col-sm-12">Verify</label>
                       <div class= "col-sm-12">
-                       <input type="password" class="form-control" name="verify" id="verify" onkeyup="checkPassword(); return false;" required="true">
+                       <input type="password" class="form-control" name="verify" id="verify" onkeyup="verifyPassword(); return false;" required="true">
                        <span id="confirmMessage" class="confirmMessage"></span>
                       </div>
                     </div>
@@ -52,7 +52,7 @@
                        <div class="col-sm-12">
                          <div class="form-inline form-control">
                            <label for="pic"> 
-                             <input type="file" name= "pic" id="pic" required="true">
+                             <input type="file" name= "pic" id="pic">
                               </label>  
                          </div>
                        </div>
