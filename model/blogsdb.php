@@ -59,10 +59,16 @@
             $statement = $this->_pdo->prepare($insert);
             
             $statement->bindValue(':username', $_POST['username'], PDO::PARAM_STR);
-            $statement->bindValue(':email', $_POST['email'], PDO::PARAM_STR);
+            $statement->bindValue(':email', $_POST['email'], PDO::PARAM_STR); 
             $statement->bindValue(':password', $_POST['password'], PDO::PARAM_STR);
             $statement->bindValue(':profile_image', 'images/'.$_FILES['pic']['name'], PDO::PARAM_STR); 
             $statement->bindValue(':bio', $_POST['biography'], PDO::PARAM_STR);
+            
+            //check if password is at least 6 characters and has a special character
+            if( !preg_match( '/[^A-Za-z0-7]+/', $password) || strlen($password) < 7)
+            {
+                echo "Password must be at least 6 characters with one number and one symbol";
+            }
             
             $statement->execute(); 
         }

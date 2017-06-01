@@ -20,7 +20,7 @@
     session_start();
 
     //Create an instance of the Base class
-    //$f3 = Base::instance();
+    $f3 = Base::instance();
 
     //Instantiate the database class
     $blogsDB = new BlogsDB();

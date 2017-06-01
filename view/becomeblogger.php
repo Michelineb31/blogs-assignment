@@ -2,9 +2,7 @@
 <include href ="{{ @navbar }}"/>
 <body>
   
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-2 col-sm-2" id="sidebar">
+      <div class="col-sm-2">
         
       </div>
       <div class="col-sm-8">
@@ -37,11 +35,12 @@
                         <input type="password" class="form-control" name="password" id="password" required="true">
                       </div>
                     </div>
-                  <!-- Password verification -->
+                  <!-- Password verification not working-->
                     <div class="form-group required">
                       <label class="control-label col-sm-12">Verify</label>
                       <div class= "col-sm-12">
-                       <input type="password" class="form-control" name="verify" id="verify" onkeyup="verifyPassword(); return false;" required="true">
+                       <input type="password" class="form-control" name="verify" id="verify" onkeyup="verifyPassword();
+                       return false;" required="true">
                        <span id="confirmMessage" class="confirmMessage"></span>
                       </div>
                     </div>
@@ -77,6 +76,7 @@
           </div>
          </div>  
       </div>
-    </div>
-  </div>
+      
+   
+ 
 </body>
