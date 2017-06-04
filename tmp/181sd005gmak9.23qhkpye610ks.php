@@ -1,5 +1,6 @@
 <?php echo $this->render($header,NULL,get_defined_vars(),0); ?>
-<?php echo $this->render($navbar,NULL,get_defined_vars(),0); ?>
+
+
 <body>
   
       <div class="col-sm-2">
@@ -20,7 +21,8 @@
                     <div class="form-group required">
                       <label class="control-label col-sm-12">Username </label>
                         <div class= "col-sm-12">
-                          <input type="text" class="form-control" name="username" id="username" required="true">
+                          <input type="text" class="form-control" name="username" id="username" placeholder="Username"
+                          value="<?= $username ?>" required autofocus required="true">
                         </div>
                     </div>
                     <div class="form-group required">
@@ -35,7 +37,7 @@
                         <input type="password" class="form-control" name="password" id="password" required="true">
                       </div>
                     </div>
-                  <!-- Password verification -->
+                  <!-- Password verification not working-->
                     <div class="form-group required">
                       <label class="control-label col-sm-12">Verify</label>
                       <div class= "col-sm-12">

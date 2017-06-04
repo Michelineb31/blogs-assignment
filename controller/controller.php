@@ -74,25 +74,43 @@ class Controller
      */
     function submitCreateAccount()
     {
+        $this->_f3->set('username', $_POST['username']);
+        $password = $_POST['password'];
         
         $data = new BlogsDB();
         $createBlogger = $data->addBlogger();
         $addProfileImage = $data->uploadProfileImage();
+        $passwordConstraint = $data->passwordConstraints($password);
+        if($passwordConstraint == true)
+        {
+            echo Template::instance()->render('view/createablog.php');
+            
+        }
+        else
+        {
+           //$this->_f3->set('error', 'view/password-fail.php');
+           //echo Template::instance()->render('view/becomeblogger.php');
+           //echo "Password must be at least 6 characters with one number and one symbol";
+           // $this->_f3->reroute('/becomeblogger');
+           //include_once('view/password-fail.php');
+           
+           $error_message = "Password must be at least 6 characters with a number and symbol";
+           header("location:javascript://history.go(-1)?error_message=$error_message");
+
+        }
+    
         
         //$_SESSION['username'] = $_POST['username'];
         //echo '<pre>';
         //var_dump('test here' .$_SESSION['username']);
         //echo'</pre>';
         
-        //if($addProfileImage){
+
            $_SESSION['username'] = $_POST['username'];
            $_SESSION['loggedIn'] = true;
             
-            //redirect
-            $this->_f3->reroute('/createablog');
-      //  } else {
-      //    $this->_f3->reroute('/createbloggerpage');
-      //  }   
+           //$this->_f3->reroute('/createablog');
+  
     }
     
     /**

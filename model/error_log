@@ -1,0 +1,1 @@
+[01-Jun-2017 18:56:39 America/Chicago] PHP Parse error:  syntax error, unexpected 'passwordConstraints' (T_STRING), expecting function (T_FUNCTION) in /home/mbourque/public_html/328/blogs-assignment/model/blogsdb.php on line 69

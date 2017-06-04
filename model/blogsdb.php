@@ -64,14 +64,26 @@
             $statement->bindValue(':profile_image', 'images/'.$_FILES['pic']['name'], PDO::PARAM_STR); 
             $statement->bindValue(':bio', $_POST['biography'], PDO::PARAM_STR);
             
+            $statement->execute(); 
+        }
+       
+        
+        
+        function passwordConstraints($password)
+        {
+            //$password = $_POST['password'];
             //check if password is at least 6 characters and has a special character
             if( !preg_match( '/[^A-Za-z0-7]+/', $password) || strlen($password) < 7)
             {
-                echo "Password must be at least 6 characters with one number and one symbol";
+                return false;
             }
-            
-            $statement->execute(); 
+            else
+            {
+                return true;
+            }
         }
+        
+        
         
         /*
          *This method accepts and image file
@@ -234,3 +246,6 @@
         */
            
     }
+    //$new = new BlogsDB();
+    
+    //$new-> passwordConstraints("qqwert!2");

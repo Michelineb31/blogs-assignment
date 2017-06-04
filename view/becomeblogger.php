@@ -1,5 +1,6 @@
 <include href="{{ @header }}" />
-<include href ="{{ @navbar }}"/>
+
+
 <body>
   
       <div class="col-sm-2">
@@ -20,7 +21,8 @@
                     <div class="form-group required">
                       <label class="control-label col-sm-12">Username </label>
                         <div class= "col-sm-12">
-                          <input type="text" class="form-control" name="username" id="username" required="true">
+                          <input type="text" class="form-control" name="username" id="username" placeholder="Username"
+                          value="{{ @username }}" required autofocus required="true">
                         </div>
                     </div>
                     <div class="form-group required">
