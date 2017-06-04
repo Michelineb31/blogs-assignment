@@ -74,30 +74,38 @@ class Controller
      */
     function submitCreateAccount()
     {
-        $this->_f3->set('username', $_POST['username']);
+        
         $password = $_POST['password'];
         
         $data = new BlogsDB();
-        $createBlogger = $data->addBlogger();
-        $addProfileImage = $data->uploadProfileImage();
+       
         $passwordConstraint = $data->passwordConstraints($password);
-        if($passwordConstraint == true)
+        
+        if(count($passwordConstraint) === 0)
         {
-            echo Template::instance()->render('view/createablog.php');
+            $createBlogger = $data->addBlogger();
+            $addProfileImage = $data->uploadProfileImage();
+            $this->_f3->reroute('/createablog');
             
-        }
-        else
-        {
-           //$this->_f3->set('error', 'view/password-fail.php');
-           //echo Template::instance()->render('view/becomeblogger.php');
-           //echo "Password must be at least 6 characters with one number and one symbol";
-           // $this->_f3->reroute('/becomeblogger');
-           //include_once('view/password-fail.php');
+              
+        } else {
+           //var_dump($passwordConstraint);
+           $this->_f3->reroute('/createbloggerpage');
            
-           $error_message = "Password must be at least 6 characters with a number and symbol";
-           header("location:javascript://history.go(-1)?error_message=$error_message");
-
         }
+        
+        //making username field "sticky"
+        /*if (isset($_POST['username'])) {
+            $f3->set('username', $_POST['username']);
+        }
+        //making email field "sticky"
+        if (isset($_POST['email'])) {
+            $f3->set('email', $_POST['email']);
+        }
+        //making email bio"sticky"
+        if (isset($_POST['bio'])) {
+            $f3->set('bio', $_POST['bio']);
+        }*/
     
         
         //$_SESSION['username'] = $_POST['username'];

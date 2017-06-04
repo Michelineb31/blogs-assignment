@@ -16,29 +16,31 @@
         <div class="jumbotron">
           <div class="container">
             <div class="row">
-                <form action="{{ @BASE }}/submitCreateAccount" method="POST" enctype="multipart/form-data">
+                <form action="{{ @BASE }}/submitCreateAccount" method="POST" data-toggle="validator" enctype="multipart/form-data">
                   <div class="col-sm-6 col-span-6" id="vertical"> 
-                    <div class="form-group required">
+                    <div class="form-group">
                       <label class="control-label col-sm-12">Username </label>
                         <div class= "col-sm-12">
                           <input type="text" class="form-control" name="username" id="username" placeholder="Username"
                           value="{{ @username }}" required autofocus required="true">
                         </div>
                     </div>
-                    <div class="form-group required">
+                    <div class="form-group ">
                       <label class="control-label col-sm-12">Email </label>
                       <div class= "col-sm-12">
                         <input type="email" class="form-control" name="email" id="email" required="true">
                       </div>
                     </div>
-                    <div class="form-group required">
+                    <div class="form-group">
                       <label class="control-label col-sm-12">Password </label>
                       <div class= "col-sm-12">
-                        <input type="password" class="form-control" name="password" id="password" required="true">
+                        <input type="password" class="form-control" data-minlength="6" name="password" id="password" required="true">
+                        <div class="help-block">Minimum of 6 characters</div>
+                        
                       </div>
                     </div>
                   <!-- Password verification not working-->
-                    <div class="form-group required">
+                    <div class="form-group">
                       <label class="control-label col-sm-12">Verify</label>
                       <div class= "col-sm-12">
                        <input type="password" class="form-control" name="verify" id="verify" onkeyup="verifyPassword();
@@ -48,7 +50,7 @@
                     </div>
                   </div>
                   <div class="col-sm-6 col-span-6">
-                    <div class="form-group required">
+                    <div class="form-group">
                      <label class="control-label col-sm-12" for="pic">Upload Portrait</label>
                        <div class="col-sm-12">
                          <div class="form-inline form-control">
@@ -58,7 +60,7 @@
                          </div>
                        </div>
                     </div>   
-                    <div class="form-group required">
+                    <div class="form-group">
                       <label class ="control-label col-sm-12">Biography</label>
                       <div class= "col-sm-12">
                         <textarea class="form-control" name="biography" id="biography"

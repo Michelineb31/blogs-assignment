@@ -71,16 +71,33 @@
         
         function passwordConstraints($password)
         {
-            //$password = $_POST['password'];
-            //check if password is at least 6 characters and has a special character
-            if( !preg_match( '/[^A-Za-z0-7]+/', $password) || strlen($password) < 7)
-            {
-                return false;
+            //var_dump($password);
+            //exit();
+            $errors = array();
+            if($_SERVER['REQUEST_METHOD']) {
+                if (!isset($_POST['username'])) {
+                    $errors['username'] = 'Please enter a username';
+                }
+                //making email field "sticky"
+                if (!isset($_POST['email']) || !(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))) {
+                    $errors['email'] = 'Please enter a valid email';
+                }
+                if (isset($password)) {
+                    if (strlen($password) < 6) {
+                        $errors['password'] = 'Password must be at least 6 characters long';
+                    }
+                } else {
+                    $errors['password'] = 'Please enter a password';
+                }
+                //making email bio"sticky"
+                if (!isset($_POST['biography'])) {
+                    $errors['biography'] = 'Please enter a bio';
+                }
+            } else {
+                $errors[] = 'Must enter in all fields';
             }
-            else
-            {
-                return true;
-            }
+            return $errors;
+    
         }
         
         
