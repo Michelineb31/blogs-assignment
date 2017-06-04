@@ -45,7 +45,7 @@
     });
 	
 	//creating the blogger account
-	$f3->route('GET|POST /submitcreateaccount', function($f3) {
+	$f3->route('POST /submitcreateaccount', function($f3) {
 		$controller = new Controller($f3);
 		$controller->submitCreateAccount(); 
 	});

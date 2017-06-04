@@ -1,6 +1,6 @@
     "use strict";
 
-    function verifyPassword()
+    function checkPassword()
     {
     
         var password1 = document.getElementById('password');

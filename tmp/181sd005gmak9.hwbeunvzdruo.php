@@ -20,10 +20,16 @@ Header for Blogs Assignment
     <link rel="stylesheet" href="styles/bootstrap.css">
     <link rel="stylesheet" href="styles/bootstrap-theme.css">
     <link rel="stylesheet" href="styles/styles.css">
+    
+
+    <!--js  -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="<?= $BASE ?>/js/password.js" type="text/javascript"></script>
+    
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="<?= $BASE ?>/js/password.js"></script>
+    
     <![endif]-->
+    
 </head>

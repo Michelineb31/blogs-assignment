@@ -22,20 +22,37 @@
                       <label class="control-label col-sm-12">Username </label>
                         <div class= "col-sm-12">
                           <input type="text" class="form-control" name="username" id="username" placeholder="Username"
-                          value="<?= $username ?>" required autofocus required="true">
+                          value="<?= $username ?>" >
+                          <div class="alert alert-danger error">
+                              <strong>Error: </strong><span id="{{ @passwordConstraint['username'] }"></span>
                         </div>
+                          <?php if ($passwordConstraint['username']): ?>
+                              
+                                    <div class="alert alert-danger"><?= $errors['username'] ?></div>
+                              
+                          <?php endif; ?>
+            
                     </div>
+                        
                     <div class="form-group ">
                       <label class="control-label col-sm-12">Email </label>
                       <div class= "col-sm-12">
-                        <input type="email" class="form-control" name="email" id="email" required="true">
+                        <input type="email" class="form-control" name="email" id="email" value=" <?= $email ?>">
                       </div>
                     </div>
+                    
                     <div class="form-group">
                       <label class="control-label col-sm-12">Password </label>
                       <div class= "col-sm-12">
-                        <input type="password" class="form-control" data-minlength="6" name="password" id="password" required="true">
-                        <div class="help-block">Minimum of 6 characters</div>
+                        <input type="password" class="form-control" data-minlength="6" name="password" id="password">
+                        <div class="alert alert-danger error">
+                              <strong>Error: </strong><span id="<?= $passwordConstraint['password'] ?>"></span>
+                        </div>
+                          <?php if ($passwordConstraint['password']): ?>
+                              
+                                    <div class="alert alert-danger"><?= $passwordConstraint['password'] ?></div>
+                              
+                          <?php endif; ?>
                         
                       </div>
                     </div>
@@ -43,8 +60,7 @@
                     <div class="form-group">
                       <label class="control-label col-sm-12">Verify</label>
                       <div class= "col-sm-12">
-                       <input type="password" class="form-control" name="verify" id="verify" onkeyup="verifyPassword();
-                       return false;" required="true">
+                       <input type="password" class="form-control" name="verify" id="verify" onkeyup="checkPassword(); return false;" required="true">
                        <span id="confirmMessage" class="confirmMessage"></span>
                       </div>
                     </div>
@@ -63,8 +79,8 @@
                     <div class="form-group">
                       <label class ="control-label col-sm-12">Biography</label>
                       <div class= "col-sm-12">
-                        <textarea class="form-control" name="biography" id="biography"
-                                rows="4" required="true"></textarea>
+                        <textarea class="form-control" name="biography"  id="biography"
+                                rows="4" ><?= $biography ?></textarea>
                       </div>
                     </div>
                     <br>

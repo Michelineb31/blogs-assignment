@@ -90,7 +90,13 @@ class Controller
               
         } else {
            //var_dump($passwordConstraint);
-           $this->_f3->reroute('/createbloggerpage');
+           $this->_f3->set('username', $_POST['username']);
+           $this->_f3->set('email', $_POST['email']);
+           $this->_f3->set('biography', $_POST['biography']);
+           
+           $this->_f3->set('passwordConstraint', $passwordConstraint);
+           
+           echo Template::instance()->render('view/becomeblogger.php'); 
            
         }
         
