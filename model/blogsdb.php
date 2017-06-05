@@ -83,8 +83,8 @@
                     $errors['email'] = 'Please enter a valid email';
                 }
                 if (isset($password)) {
-                    if (strlen($password) < 6) {
-                        $errors['password'] = 'Password must be at least 6 characters long';
+                    if (strlen($password) < 6 || !preg_match( '~\d~', $password) || !preg_match('`[^0-9a-zA-Z]`',$password)) {
+                        $errors['password'] = 'Password must be at least 6 characters long contain a number and a symbol';
                     }
                 } else {
                     $errors['password'] = 'Please enter a password';

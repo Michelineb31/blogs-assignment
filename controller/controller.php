@@ -92,26 +92,13 @@ class Controller
            //var_dump($passwordConstraint);
            $this->_f3->set('username', $_POST['username']);
            $this->_f3->set('email', $_POST['email']);
-           $this->_f3->set('biography', $_POST['biography']);
+           $this->_f3->set('biography', strip_tags($_POST['biography']));
            
            $this->_f3->set('passwordConstraint', $passwordConstraint);
            
            echo Template::instance()->render('view/becomeblogger.php'); 
            
         }
-        
-        //making username field "sticky"
-        /*if (isset($_POST['username'])) {
-            $f3->set('username', $_POST['username']);
-        }
-        //making email field "sticky"
-        if (isset($_POST['email'])) {
-            $f3->set('email', $_POST['email']);
-        }
-        //making email bio"sticky"
-        if (isset($_POST['bio'])) {
-            $f3->set('bio', $_POST['bio']);
-        }*/
     
         
         //$_SESSION['username'] = $_POST['username'];

@@ -21,7 +21,7 @@
                     <div class="form-group">
                       <label class="control-label col-sm-12">Username </label>
                         <div class= "col-sm-12">
-                          <input type="text" class="form-control" name="username" id="username" placeholder="Username"
+                          <input type="text" class="form-control" name="username" id="username" placeholder="Username" required="true"
                           value="<?= $username ?>" >
                           <div class="alert alert-danger error">
                               <strong>Error: </strong><span id="{{ @passwordConstraint['username'] }"></span>
@@ -37,7 +37,7 @@
                     <div class="form-group ">
                       <label class="control-label col-sm-12">Email </label>
                       <div class= "col-sm-12">
-                        <input type="email" class="form-control" name="email" id="email" value=" <?= $email ?>">
+                        <input type="email" class="form-control" data-error="Bruh, that email address is invalid" name="email" id="email" value=" <?= $email ?>">
                       </div>
                     </div>
                     
@@ -60,7 +60,7 @@
                     <div class="form-group">
                       <label class="control-label col-sm-12">Verify</label>
                       <div class= "col-sm-12">
-                       <input type="password" class="form-control" name="verify" id="verify" onkeyup="checkPassword(); return false;" required="true">
+                       <input type="password" class="form-control" data=minLength="6" name="verify" id="verify" onkeyup="checkPassword(); return false;" required="true">
                        <span id="confirmMessage" class="confirmMessage"></span>
                       </div>
                     </div>
