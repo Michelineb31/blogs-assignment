@@ -76,6 +76,7 @@ class Controller
     {
         
         $password = $_POST['password'];
+        $username = $_POST['username'];
         
         $data = new BlogsDB();
        
@@ -86,12 +87,17 @@ class Controller
             
             if($data->checkUsername($username) == true)
             {
-                //error message
+              $this->_f3->set('userError', 'Sorry username is taken');
+              echo Template::instance()->render('view/becomeblogger.php');
+              exit();
             } else {
                 
             $createBlogger = $data->addBlogger();
+            
             $addProfileImage = $data->uploadProfileImage();
             $this->_f3->reroute('/createablog');
+            //echo Template::instance()->render('view/becomeblogger.php');
+            exit();
             }
             
               
@@ -103,7 +109,8 @@ class Controller
            
            $this->_f3->set('passwordConstraint', $passwordConstraint);
            
-           echo Template::instance()->render('view/becomeblogger.php'); 
+           echo Template::instance()->render('view/becomeblogger.php');
+           exit();
            
         }
         

@@ -26,9 +26,9 @@
                           <div class="alert alert-danger error">
                               <strong>Error: </strong><span id="{{ @passwordConstraint['username'] }"></span>
                         </div>
-                          <check if="{{ @passwordConstraint['username'] }}">
+                          <check if="{{ @userError }} != null ">
                               <true>
-                                    <div class="alert alert-danger">{{ @errors['username']}}</div>
+                                    <div class="alert alert-danger">{{ @userError }}</div>
                               </true>
                           </check>
                         </div>

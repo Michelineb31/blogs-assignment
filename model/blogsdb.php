@@ -67,10 +67,14 @@
             $statement->execute(); 
         }
         
+        /**
+         *This function checks if the username is in the database
+         *
+         *@param $username username is the username for the blogger
+         *@return false if username is not taken true if it is
+         */
         function checkUsername($username)
-        {
-            $check = $username;
-            
+        {    
             $sql ='SELECT username FROM bloggers WHERE username = :username';
             $statement = $this->_pdo->prepare($sql);
             $statement->bindValue(':username', $username, PDO::PARAM_STR);
@@ -78,29 +82,29 @@
             $statement->execute();
             
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-            
-                if($row['username'] == $username){
-                return false;
+                
+                if($row[username] == $username){
+                return true;
                 $exists = true;
                 exit();
                 }
            }
            
-           if($exists == true)
-           {
-                return true;        
-           } else {
-                return false;
-           }
+           return false;
         
         }
         
-        
+        /**
+         *This function returns errors if the password
+         *does not meet criteria
+         *
+         *@param $password  password the user chooses
+         *@return the error messages
+         */
         function passwordConstraints($password)
         {
             //var_dump($password);
             //exit();
-            $errors = array();
             if($_SERVER['REQUEST_METHOD']) {
                 if (!isset($_POST['username'])) {
                     $errors['username'] = 'Please enter a username';
@@ -116,7 +120,6 @@
                 } else {
                     $errors['password'] = 'Please enter a password';
                 }
-                //making email bio"sticky"
                 if (!isset($_POST['biography'])) {
                     $errors['biography'] = 'Please enter a bio';
                 }

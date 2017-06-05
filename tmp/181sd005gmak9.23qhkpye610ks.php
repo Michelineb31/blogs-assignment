@@ -26,9 +26,9 @@
                           <div class="alert alert-danger error">
                               <strong>Error: </strong><span id="{{ @passwordConstraint['username'] }"></span>
                         </div>
-                          <?php if ($passwordConstraint['username']): ?>
+                          <?php if ($userError  != null): ?>
                               
-                                    <div class="alert alert-danger"><?= $errors['username'] ?></div>
+                                    <div class="alert alert-danger"><?= $userError ?></div>
                               
                           <?php endif; ?>
                         </div>
