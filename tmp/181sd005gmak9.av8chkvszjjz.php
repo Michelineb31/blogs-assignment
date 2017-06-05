@@ -1,5 +1,5 @@
 <?php echo $this->render($header,NULL,get_defined_vars(),0); ?>
-<?php echo $this->render($navbar,NULL,get_defined_vars(),0); ?>
+
  <body>
    <div class="container">
       <div class="row">

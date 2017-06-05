@@ -84,6 +84,11 @@ class Controller
         
         if(count($passwordConstraint) === 0)
         {
+           $this->_f3->set('username', $_POST['username']);
+           $this->_f3->set('email', $_POST['email']);
+           $this->_f3->set('biography', strip_tags($_POST['biography']));
+           
+           $this->_f3->set('passwordConstraint', $passwordConstraint);
             
             if($data->checkUsername($username) == true)
             {
