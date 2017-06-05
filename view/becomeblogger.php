@@ -21,7 +21,7 @@
                     <div class="form-group">
                       <label class="control-label col-sm-12">Username </label>
                         <div class= "col-sm-12">
-                          <input type="text" class="form-control" name="username" id="username" placeholder="Username" required="true"
+                          <input type="text" class="form-control" name="username" id="username" required="true"
                           value="{{ @username }}" >
                           <div class="alert alert-danger error">
                               <strong>Error: </strong><span id="{{ @passwordConstraint['username'] }"></span>
@@ -31,20 +31,21 @@
                                     <div class="alert alert-danger">{{ @errors['username']}}</div>
                               </true>
                           </check>
+                        </div>
             
                     </div>
                         
                     <div class="form-group ">
                       <label class="control-label col-sm-12">Email </label>
                       <div class= "col-sm-12">
-                        <input type="email" class="form-control" data-error="Bruh, that email address is invalid" name="email" id="email" value=" {{ @email }}">
+                        <input type="email" class="form-control" data-error="Email address is invalid" name="email" id="email" required="true" value=" {{ @email }}">
                       </div>
                     </div>
                     
                     <div class="form-group">
                       <label class="control-label col-sm-12">Password </label>
                       <div class= "col-sm-12">
-                        <input type="password" class="form-control" data-minlength="6" name="password" id="password">
+                        <input type="password" class="form-control" data-minlength="6" name="password" id="password" required="true">
                         <div class="alert alert-danger error">
                               <strong>Error: </strong><span id="{{ @passwordConstraint['password'] }}"></span>
                         </div>
@@ -79,7 +80,7 @@
                     <div class="form-group">
                       <label class ="control-label col-sm-12">Biography</label>
                       <div class= "col-sm-12">
-                        <textarea class="form-control" name="biography"  id="biography"
+                        <textarea class="form-control" required="true" name="biography"  id="biography"
                                 rows="4" >{{ @biography }}</textarea>
                       </div>
                     </div>

@@ -66,7 +66,34 @@
             
             $statement->execute(); 
         }
-       
+        
+        function checkUsername($username)
+        {
+            $check = $username;
+            
+            $sql ='SELECT username FROM bloggers WHERE username = :username';
+            $statement = $this->_pdo->prepare($sql);
+            $statement->bindValue(':username', $username, PDO::PARAM_STR);
+            
+            $statement->execute();
+            
+            while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+            
+                if($row['username'] == $username){
+                return false;
+                $exists = true;
+                exit();
+                }
+           }
+           
+           if($exists == true)
+           {
+                return true;        
+           } else {
+                return false;
+           }
+        
+        }
         
         
         function passwordConstraints($password)
@@ -97,10 +124,7 @@
                 $errors[] = 'Must enter in all fields';
             }
             return $errors;
-    
         }
-        
-        
         
         /*
          *This method accepts and image file

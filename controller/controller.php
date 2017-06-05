@@ -83,9 +83,16 @@ class Controller
         
         if(count($passwordConstraint) === 0)
         {
+            
+            if($data->checkUsername($username) == true)
+            {
+                //error message
+            } else {
+                
             $createBlogger = $data->addBlogger();
             $addProfileImage = $data->uploadProfileImage();
             $this->_f3->reroute('/createablog');
+            }
             
               
         } else {
@@ -99,14 +106,11 @@ class Controller
            echo Template::instance()->render('view/becomeblogger.php'); 
            
         }
-    
         
         //$_SESSION['username'] = $_POST['username'];
         //echo '<pre>';
         //var_dump('test here' .$_SESSION['username']);
         //echo'</pre>';
-        
-
            $_SESSION['username'] = $_POST['username'];
            $_SESSION['loggedIn'] = true;
             
